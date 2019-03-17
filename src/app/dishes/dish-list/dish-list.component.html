@@ -1,4 +1,16 @@
-<p>
-  dish-list works!
-</p>
-<app-dish-item></app-dish-item>
+<div>
+  <button mat-raised-button color="warn" class="col-new-course">New Dish</button>
+</div>
+<hr>
+<a  href="#" *ngFor="let dish of dishes">
+  <mat-grid-list cols="3" rowHeight="5:1">
+    <mat-grid-tile>
+      <h4 id="course-name">{{ dish.name }}</h4>
+      <p id="course-desc">{{ dish.description }}</p>
+      <img id="course-img" style="max-height: 50px;" [src]="dish.imagePath" alt= "{{ dish.name }}">
+    </mat-grid-tile>
+  </mat-grid-list>
+</a>
+<div>
+  <app-dish-item></app-dish-item>
+</div>
