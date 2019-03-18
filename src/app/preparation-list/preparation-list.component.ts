@@ -15,7 +15,6 @@ export class PreparationListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.ingredients[0].name);
   }
 
 }
