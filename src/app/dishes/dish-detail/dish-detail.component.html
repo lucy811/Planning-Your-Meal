@@ -1,3 +1,10 @@
-<p>
-  dish-detail works!
-</p>
+<div class="dish-detail">
+  <img id="dish-image" src="" alt="">
+  <h1>Dish Name</h1>
+  <button mat-button [matMenuTriggerFor]="menu" id="manage-dish">Manage Dish</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item id="manage">To Prepartion List</button>
+    <button mat-menu-item id="manage">Edit Dish</button>
+    <button mat-menu-item id="manage">Delete Dish</button>
+  </mat-menu>
+</div>

@@ -1,4 +1,8 @@
-<p>
-  preparation-list works!
-</p>
-<app-preparation-edit></app-preparation-edit>
+<div>
+  <app-preparation-edit></app-preparation-edit>
+    <mat-nav-list>
+      <mat-list-item  id ="list-item-style" *ngFor="let ingredient of ingredients;">
+        {{ ingredient.name }} ({{ ingredient.weight }})
+      </mat-list-item>
+    </mat-nav-list>
+</div>
