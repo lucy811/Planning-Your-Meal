@@ -1,4 +1,4 @@
-<app-header></app-header>
-<app-dishes></app-dishes>
-<app-preparation-list></app-preparation-list>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<app-dishes *ngIf="loadFeature === 'dish'"></app-dishes>
+<app-preparation-list *ngIf="loadFeature === 'preparation-list'"></app-preparation-list>
 <router-outlet></router-outlet>
