@@ -3,5 +3,5 @@
 </div>
 <hr>
 <div>
-  <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+  <app-dish-item  *ngFor="let dish of dishes" [dish]="dish" (selectedDish)="onSelected($event)"></app-dish-item>
 </div>

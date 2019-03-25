@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Dish } from '../dish.model';
 
 @Component({
@@ -7,6 +7,7 @@ import { Dish } from '../dish.model';
   styleUrls: ['./dish-list.component.scss']
 })
 export class DishListComponent implements OnInit {
+  @Output() dishSelected = new EventEmitter();
 
   dishes: Dish[] = [
     new Dish('Gongbao Chicken', 'Chinese Food', 'http://farm7.static.flickr.com/6127/5949832181_d73a87f299_z.jpg'),
@@ -16,5 +17,9 @@ export class DishListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelected(dish: Dish) {
+    this.dishSelected.emit(dish);
   }
 }

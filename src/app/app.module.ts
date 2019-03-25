@@ -11,6 +11,7 @@ import { DishListComponent } from './dishes/dish-list/dish-list.component';
 import { DishItemComponent } from './dishes/dish-list/dish-item/dish-item.component';
 import { DishDetailComponent } from './dishes/dish-detail/dish-detail.component';
 import { PreparationEditComponent } from './preparation-list/preparation-edit/preparation-edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PreparationEditComponent } from './preparation-list/preparation-edit/pr
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

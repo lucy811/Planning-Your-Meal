@@ -17,4 +17,7 @@ export class PreparationListComponent implements OnInit {
   ngOnInit() {
   }
 
+  AddPrepartionList(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 }
