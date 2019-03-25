@@ -1,3 +1,9 @@
-<p>
-  dish-item works!
-</p>
+<a href="#">
+  <mat-grid-list cols="3" rowHeight="5:1">
+    <mat-grid-tile>
+      <h4 id="dish-name">{{ dish.name }}</h4>
+      <p id="dish-desc">{{ dish.description }}</p>
+      <img style="max-height: 50px;" [src]="dish.imagePath" alt= "{{ dish.name }}">
+    </mat-grid-tile>
+  </mat-grid-list>
+</a>
