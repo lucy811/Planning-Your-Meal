@@ -7,7 +7,7 @@ import { Dish } from './dish.model';
   styleUrls: ['./dishes.component.scss']
 })
 export class DishesComponent implements OnInit {
-  selectedDish : Dish;
+  selectedDish: Dish;
 
   constructor() { }
 

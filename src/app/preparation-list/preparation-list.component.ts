@@ -7,7 +7,7 @@ import { Ingredient } from '../shared/ingredient.model';
   styleUrls: ['./preparation-list.component.scss']
 })
 export class PreparationListComponent implements OnInit {
-  ingredients: Ingredient[] =[
+  ingredients: Ingredient[] = [
     new Ingredient('Apple', 5),
     new Ingredient('Banana', 3),
   ];
