@@ -11,6 +11,7 @@ import { DishListComponent } from './dishes/dish-list/dish-list.component';
 import { DishItemComponent } from './dishes/dish-list/dish-item/dish-item.component';
 import { DishDetailComponent } from './dishes/dish-detail/dish-detail.component';
 import { PreparationEditComponent } from './preparation-list/preparation-edit/preparation-edit.component';
+import { PreparationListService } from './preparation-list/preparation-list.service';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -31,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PreparationListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
