@@ -1,0 +1,8 @@
+<div id="preparation-list-style">
+  <app-preparation-edit (ingredientAdded)="AddPrepartionList($event)"></app-preparation-edit>
+    <mat-nav-list>
+      <mat-list-item  id ="list-item-style" *ngFor="let ingredient of ingredients;">
+        {{ ingredient.name }} ({{ ingredient.weight }})
+      </mat-list-item>
+    </mat-nav-list>
+</div>

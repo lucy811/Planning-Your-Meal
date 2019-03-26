@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="mean-plan">Meal Plan</span>
+    <span class="header" (click)="onSelect('dish')">Dishes</span>
+    <span class="header" (click)="onSelect('preparation-list')">Preparation List</span>
+
+    <span class="menu">
+      <button mat-button [matMenuTriggerFor]="manage" class="manage">Manage</button>
+      <mat-menu #manage="matMenu">
+        <button mat-menu-item class="manage">Fetch Data</button>
+        <button mat-menu-item class="manage">Save Data</button>
+      </mat-menu>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

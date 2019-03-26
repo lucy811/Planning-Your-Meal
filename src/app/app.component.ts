@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Planning-Your-Meal-Reservation';
+  loadFeature = 'dish';
+
+  onNavigate(event: string) {
+    this.loadFeature = event;
+  }
 }

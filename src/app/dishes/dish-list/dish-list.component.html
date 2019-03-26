@@ -1,0 +1,7 @@
+<div>
+  <button mat-raised-button color="warn" class="col-new-dish">New Dish</button>
+</div>
+<hr>
+<div>
+  <app-dish-item  *ngFor="let dish of dishes" [dish]="dish" (selectedDish)="onSelected($event)"></app-dish-item>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <app-dish-list (dishSelected)="onSelected($event)"></app-dish-list>
+  </div>
+  <div *ngIf= "selectedDish; else noSelected">
+    <app-dish-detail [dish]="selectedDish"></app-dish-detail>
+  </div>
+  <ng-template #noSelected>
+    Please select a dish!
+  </ng-template>
+</div>
