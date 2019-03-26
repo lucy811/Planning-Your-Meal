@@ -1,6 +1,6 @@
 <div>
   <div>
-    <app-dish-list (dishSelected)="onSelected($event)"></app-dish-list>
+    <app-dish-list></app-dish-list>
   </div>
   <div *ngIf= "selectedDish; else noSelected">
     <app-dish-detail [dish]="selectedDish"></app-dish-detail>
