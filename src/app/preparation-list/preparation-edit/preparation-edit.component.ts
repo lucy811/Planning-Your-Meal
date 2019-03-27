@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Ingredient } from '../../shared/ingredient.model';
+import { PreparationListService } from '../../preparation-list/preparation-list.service';
 
 @Component({
   selector: 'app-preparation-edit',
@@ -9,15 +10,14 @@ import { Ingredient } from '../../shared/ingredient.model';
 export class PreparationEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('weightInput') weightInputRef: ElementRef;
-  @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
-  constructor() { }
+  constructor(private plService: PreparationListService) { }
 
   ngOnInit() {
   }
 
   onAddItem() {
     const newIngredient = new Ingredient(this.nameInputRef.nativeElement.value, this.weightInputRef.nativeElement.value);
-    this.ingredientAdded.emit(newIngredient);
+    this.plService.addIngredient(newIngredient);
   }
 }

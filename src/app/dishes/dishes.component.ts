@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from './dish.model';
+import { DishService } from '../dishes/dish.service';
 
 @Component({
   selector: 'app-dishes',
   templateUrl: './dishes.component.html',
-  styleUrls: ['./dishes.component.scss']
+  styleUrls: ['./dishes.component.scss'],
+  providers: [DishService]
 })
 export class DishesComponent implements OnInit {
-  selectedDish : Dish;
+  selectedDish: Dish;
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit() {
-  }
-
-  onSelected(dish: Dish) {
-    this.selectedDish = dish;
+    this.dishService.dishSelected
+    .subscribe (
+      (dish: Dish) => {
+        this.selectedDish = dish;
+      }
+    );
   }
 }

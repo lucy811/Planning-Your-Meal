@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Dish } from '../../dish.model';
-
+import { DishService } from '../../../dishes/dish.service';
 
 @Component({
   selector: 'app-dish-item',
@@ -9,14 +9,13 @@ import { Dish } from '../../dish.model';
 })
 export class DishItemComponent implements OnInit {
   @Input() dish: Dish;
-  @Output() selectedDish = new EventEmitter();
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit() {
   }
 
   onSelected() {
-    this.selectedDish.emit(this.dish);
+    this.dishService.dishSelected.emit(this.dish);
   }
 }
