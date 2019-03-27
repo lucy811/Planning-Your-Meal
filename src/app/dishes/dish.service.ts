@@ -1,7 +1,9 @@
 import { Dish } from '../dishes/dish.model';
-import { EventEmitter, Output } from '@angular/core';
+import { EventEmitter, Output, Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
+import { PreparationListService } from '../preparation-list/preparation-list.service';
 
+@Injectable()
 export class DishService {
   @Output() dishSelected = new EventEmitter<Dish>();
 
@@ -22,7 +24,13 @@ export class DishService {
              ]),
   ];
 
+  constructor(private plService: PreparationListService) {}
+
   getDishes() {
     return this.dishes.slice();
+  }
+
+  addIngredientsToShoppingList(dish: Dish) {
+    this.plService.addIngredients(dish.ingredients.slice());
   }
 }
