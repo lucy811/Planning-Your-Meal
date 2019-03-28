@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DishService } from '../../dishes/dish.service';
 import { Dish } from '../dish.model';
 
@@ -10,9 +11,13 @@ import { Dish } from '../dish.model';
 export class DishListComponent implements OnInit {
   dishes: Dish[];
 
-  constructor(private dishService: DishService) { }
+  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.dishes = this.dishService.getDishes();
+  }
+
+  onNewDish() {
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 }

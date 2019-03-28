@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dish } from '../dish.model';
 import { DishService } from '../../dishes/dish.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dish-detail',
@@ -12,7 +12,7 @@ export class DishDetailComponent implements OnInit {
   @Input() dish: Dish;
   id: number;
 
-  constructor(private dishService: DishService, private route: ActivatedRoute) { }
+  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -25,5 +25,9 @@ export class DishDetailComponent implements OnInit {
 
   addIngredientsToList() {
     this.dishService.addIngredientsToShoppingList(this.dish);
+  }
+
+  onEditDish() {
+    this.router.navigate(['edit'], {relativeTo: this.route});
   }
 }

@@ -4,7 +4,7 @@
   <button mat-button [matMenuTriggerFor]="menu" id="manage-dish">Manage Dish</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item id="manage" (click)="addIngredientsToList()">To Prepartion List</button>
-    <button mat-menu-item id="manage">Edit Dish</button>
+    <button mat-menu-item id="manage" (click)="onEditDish()">Edit Dish</button>
     <button mat-menu-item id="manage">Delete Dish</button>
   </mat-menu>
   <div>
