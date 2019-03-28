@@ -13,6 +13,7 @@ import { DishDetailComponent } from './dishes/dish-detail/dish-detail.component'
 import { PreparationEditComponent } from './preparation-list/preparation-edit/preparation-edit.component';
 import { PreparationListService } from './preparation-list/preparation-list.service';
 import { FormsModule } from '@angular/forms';
+import { DishStartComponent } from './dishes/dish-start/dish-start.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     DishListComponent,
     DishItemComponent,
     DishDetailComponent,
-    PreparationEditComponent
+    PreparationEditComponent,
+    DishStartComponent
   ],
   imports: [
     BrowserModule,

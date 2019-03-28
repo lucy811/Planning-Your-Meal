@@ -8,7 +8,6 @@ import { Dish } from '../dish.model';
   styleUrls: ['./dish-list.component.scss']
 })
 export class DishListComponent implements OnInit {
-
   dishes: Dish[];
 
   constructor(private dishService: DishService) { }

@@ -33,4 +33,8 @@ export class DishService {
   addIngredientsToShoppingList(dish: Dish) {
     this.plService.addIngredients(dish.ingredients.slice());
   }
+
+  getDish(index: number) {
+    return this.dishes[index];
+  }
 }

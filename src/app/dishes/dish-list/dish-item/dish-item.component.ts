@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dish } from '../../dish.model';
-import { DishService } from '../../../dishes/dish.service';
 
 @Component({
   selector: 'app-dish-item',
@@ -9,13 +8,9 @@ import { DishService } from '../../../dishes/dish.service';
 })
 export class DishItemComponent implements OnInit {
   @Input() dish: Dish;
-
-  constructor(private dishService: DishService) { }
-
+  @Input() index: number;
+  
   ngOnInit() {
   }
 
-  onSelected() {
-    this.dishService.dishSelected.emit(this.dish);
-  }
 }
