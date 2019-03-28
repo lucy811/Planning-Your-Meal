@@ -20,7 +20,7 @@ export class DishDetailComponent implements OnInit {
         this.id = + params['id'];
         this.dish = this.dishService.getDish(this.id);
       }
-    )
+    );
   }
 
   addIngredientsToList() {

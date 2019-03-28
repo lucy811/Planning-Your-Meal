@@ -9,7 +9,7 @@ import { Dish } from '../../dish.model';
 export class DishItemComponent implements OnInit {
   @Input() dish: Dish;
   @Input() index: number;
-  
+
   ngOnInit() {
   }
 
