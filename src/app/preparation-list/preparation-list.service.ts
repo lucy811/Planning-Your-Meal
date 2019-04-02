@@ -3,6 +3,7 @@ import { Ingredient } from '../shared/ingredient.model';
 
 export class PreparationListService {
   ingredientsChanged = new Subject<Ingredient[]>();
+  startedEditing = new Subject<number>();
 
   ingredients: Ingredient[] = [
     new Ingredient('Apple', 5),

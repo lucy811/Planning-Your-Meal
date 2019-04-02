@@ -24,6 +24,9 @@ export class PreparationListComponent implements OnInit, OnDestroy {
     );
   }
 
+  onEditItem(index: number) {
+    this.plService.startedEditing.next(index);
+  }
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
