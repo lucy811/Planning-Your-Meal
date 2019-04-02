@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Dish } from './dish.model';
 import { DishService } from '../dishes/dish.service';
 
 @Component({
@@ -9,16 +8,8 @@ import { DishService } from '../dishes/dish.service';
   providers: [DishService]
 })
 export class DishesComponent implements OnInit {
-  selectedDish: Dish;
-
-  constructor(private dishService: DishService) { }
 
   ngOnInit() {
-    this.dishService.dishSelected
-    .subscribe (
-      (dish: Dish) => {
-        this.selectedDish = dish;
-      }
-    );
   }
+
 }

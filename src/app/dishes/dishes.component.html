@@ -2,10 +2,7 @@
   <div>
     <app-dish-list></app-dish-list>
   </div>
-  <div *ngIf= "selectedDish; else noSelected">
-    <app-dish-detail [dish]="selectedDish"></app-dish-detail>
+  <div>
+    <router-outlet></router-outlet>
   </div>
-  <ng-template #noSelected>
-    Please select a dish!
-  </ng-template>
 </div>

@@ -1,7 +1,7 @@
 <div>
-  <button mat-raised-button color="warn" class="col-new-dish">New Dish</button>
+  <button mat-raised-button color="warn" class="col-new-dish" (click)="onNewDish()">New Dish</button>
 </div>
 <hr>
 <div>
-  <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+  <app-dish-item  *ngFor="let dish of dishes; let i = index" [index]="i" [dish]="dish"></app-dish-item>
 </div>

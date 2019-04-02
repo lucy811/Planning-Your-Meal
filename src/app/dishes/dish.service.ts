@@ -1,11 +1,10 @@
 import { Dish } from '../dishes/dish.model';
-import { EventEmitter, Output, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { PreparationListService } from '../preparation-list/preparation-list.service';
 
 @Injectable()
 export class DishService {
-  @Output() dishSelected = new EventEmitter<Dish>();
 
   dishes: Dish[] = [
     new Dish('Gongbao Chicken',
@@ -32,5 +31,9 @@ export class DishService {
 
   addIngredientsToShoppingList(dish: Dish) {
     this.plService.addIngredients(dish.ingredients.slice());
+  }
+
+  getDish(index: number) {
+    return this.dishes[index];
   }
 }
