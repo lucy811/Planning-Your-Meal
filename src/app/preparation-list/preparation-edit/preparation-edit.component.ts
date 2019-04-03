@@ -35,8 +35,14 @@ export class PreparationEditComponent implements OnInit, OnDestroy {
 
   onAddItem(form: NgForm) {
     const value = form.value;
-    const newIngredient = new Ingredient(value.name, value.amount);
-    this.plService.addIngredient(newIngredient);
+    const newIngredient = new Ingredient(value.name, value.weight);
+
+    if (this.editMode === true) {
+      this.plService.updateIngredient(this.editNumber, newIngredient);
+    } else {
+      this.plService.addIngredient(newIngredient);
+    }
+    this.editMode = false;
   }
 
   ngOnDestroy() {
