@@ -33,7 +33,7 @@ export class PreparationEditComponent implements OnInit, OnDestroy {
     );
   }
 
-  onAddItem(form: NgForm) {
+  onSubmit(form: NgForm) {
     const value = form.value;
     const newIngredient = new Ingredient(value.name, value.weight);
 
@@ -42,6 +42,12 @@ export class PreparationEditComponent implements OnInit, OnDestroy {
     } else {
       this.plService.addIngredient(newIngredient);
     }
+    this.editMode = false;
+    this.plForm.reset();
+  }
+
+  onClear() {
+    this.plForm.reset();
     this.editMode = false;
   }
 
