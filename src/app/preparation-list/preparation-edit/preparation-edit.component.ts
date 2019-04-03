@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Ingredient } from '../../shared/ingredient.model';
 import { PreparationListService } from '../../preparation-list/preparation-list.service';
 import { NgForm } from '@angular/forms';
@@ -9,10 +9,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './preparation-edit.component.html',
   styleUrls: ['./preparation-edit.component.scss']
 })
-export class PreparationEditComponent implements OnInit {
+export class PreparationEditComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   editNumber: number;
   editMode = false;
+  editedItem: Ingredient;
+  @ViewChild('f') plForm: NgForm;
 
   constructor(private plService: PreparationListService) { }
 
@@ -22,6 +24,11 @@ export class PreparationEditComponent implements OnInit {
       (index: number) => {
         this.editNumber = index;
         this.editMode = true;
+        this.editedItem = this.plService.getIngredient(index);
+        this.plForm.setValue({
+          name : this.editedItem.name,
+          weight: this.editedItem.weight
+        });
       }
     );
   }
@@ -32,7 +39,7 @@ export class PreparationEditComponent implements OnInit {
     this.plService.addIngredient(newIngredient);
   }
 
-  ngOnDestory() {
-    this.subscription.unsubscribe;
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

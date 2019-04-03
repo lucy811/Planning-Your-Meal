@@ -10,6 +10,10 @@ export class PreparationListService {
     new Ingredient('Banana', 3),
   ];
 
+  getIngredient(index: number) {
+    return this.ingredients[index];
+  }
+
   getIngredients() {
     return this.ingredients.slice();
   }
