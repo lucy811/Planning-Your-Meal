@@ -1,1 +1,36 @@
-<h3>Dish edit works!</h3>
+<form class="dish-edit-form" [formGroup]="dishForm" (ngSubmit)="onSubmit()">
+  <div class="dish-edit-row">
+    <button mat-fab color="primary">Save</button>
+    <button mat-fab color="accent">Cancel</button>
+  </div>
+  <div class="dish-edit-row">
+    <div class="form-row-name">
+      <label>Image URL</label>
+      <input type="text" formControlName="imagePath" class="img-responsive">
+    </div>
+    <div>
+      <img [src]="imagePath.value" class="form-control">
+    </div>
+    <div class="dish-edit-row">
+      <div class="form-row-name">
+        <div>
+          <label for="name">Name</label>
+        </div>
+        <input matInput type="text" id="input" formControlName="dishName" class="form-control">
+      </div>
+    </div>
+    <div class="dish-edit-row">
+      <div class="form-row-name">
+        <label>Description</label>
+      </div>
+      <div>
+        <textarea type="text" rows="6" formControlName="dishDescription"></textarea>
+      </div>
+    </div>
+    <div>
+      <input type="text" class="form-control" formControlName="ingredientName">
+      <input type="text" class="form-control" formControlName="weight">
+      <button mat-mini-fab color="warn" type="button">X</button>
+    </div>
+  </div>
+</form>

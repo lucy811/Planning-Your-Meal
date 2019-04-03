@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+import { DishService } from '../dish.service';
 
 @Component({
   selector: 'app-dish-edit',
@@ -9,8 +11,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class DishEditComponent implements OnInit {
   id: number;
   editMode = false;
-
-  constructor(private route: ActivatedRoute) { }
+  dishForm: FormGroup;
+  
+  constructor(private route: ActivatedRoute, private dishService: DishService) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -19,5 +22,29 @@ export class DishEditComponent implements OnInit {
         this.editMode = params['id'] != null;
       }
     );
+    this.initForm();
+  }
+
+  initForm() {
+    let dishName = '';
+    let imagePath = '';
+    let dishDescription = '';
+    
+    if(this.editMode) {
+      const dish = this.dishService.getDish(this.id);
+      dishName = dish.name;
+      imagePath = dish.imagePath;
+      dishDescription = dish.description;
+    }
+
+    this.dishForm = new FormGroup({
+      'dishName': new FormControl(dishName),
+      'imagePath': new FormControl(imagePath),
+      'dishDescription': new FormControl(dishDescription),
+    })
+  }
+
+  onSubmit() {
+    console.log(this.dishForm);
   }
 }
