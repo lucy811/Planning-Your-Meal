@@ -10,8 +10,9 @@ import { Subscription } from 'rxjs';
 })
 export class PreparationListComponent implements OnInit, OnDestroy {
   ingredients: Ingredient[];
+  subscription: Subscription;
 
-  constructor(private plService: PreparationListService, private subscription: Subscription) { }
+  constructor(private plService: PreparationListService) { }
 
   ngOnInit() {
     this.ingredients = this.plService.getIngredients();
@@ -23,6 +24,9 @@ export class PreparationListComponent implements OnInit, OnDestroy {
     );
   }
 
+  onEditItem(index: number) {
+    this.plService.startedEditing.next(index);
+  }
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

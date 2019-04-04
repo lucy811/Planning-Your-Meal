@@ -1,1 +1,47 @@
-<h3>Dish edit works!</h3>
+<form class="dish-edit-form" [formGroup]="dishForm" (ngSubmit)="onSubmit()">
+  <div class="dish-edit-row">
+    <button mat-fab color="primary" type="submit" [disabled]="!dishForm.valid">Save</button>
+    <button mat-fab color="accent" (click)="onCancel()">Cancel</button>
+  </div>
+  <div class="dish-edit-row">
+    <div class="form-row-name">
+      <label for="imagePath">Image URL</label>
+    </div>
+    <div>
+      <div *ngIf="imagePath.value !=='' else noImage">
+        <img [src]="imagePath.value" class="img-responsive">
+      </div>
+      <ng-template #noImage>
+        <img src="../../../assets/image.jpg" class="img-responsive">
+      </ng-template>
+    </div>
+    <input matInput type="text" id="input" formControlName="imagePath" class="form-control" #imagePath>
+  </div>
+  <div class="dish-edit-row">
+    <div class="form-row-name">
+      <div>
+        <label for="dishName">Name</label>
+      </div>
+      <input matInput type="text" id="input" formControlName="dishName" class="form-control">
+    </div>
+  </div>
+  <div class="dish-edit-row">
+    <div class="form-row-name">
+      <label for="dishDescription">Description</label>
+    </div>
+    <div>
+      <textarea matInput type="text" id="description" rows="10" formControlName="dishDescription"></textarea>
+    </div>
+  </div>
+  <div class="dish-edit-row" formArrayName="ingredients">
+    <div *ngFor="let ingredientCtrl of getControl(); let i = index" [formGroupName]="i" style="margin-top: 10px;">
+      <input type="text" class="form-control" formControlName="ingredientName">
+      <input type="text" class="form-control" formControlName="weight">
+      <button mat-mini-fab color="warn" (click)="onDeleteIngredient(i)">X</button>
+    </div>
+    <hr>
+    <div>
+      <button mat-raised-button type="button" (click)="onAddIngredient()">Add Ingredient</button>
+    </div>
+  </div>
+</form>

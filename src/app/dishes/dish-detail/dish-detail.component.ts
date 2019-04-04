@@ -17,7 +17,7 @@ export class DishDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
-        this.id = + params['id'];
+        this.id = + params.id;
         this.dish = this.dishService.getDish(this.id);
       }
     );
@@ -29,5 +29,10 @@ export class DishDetailComponent implements OnInit {
 
   onEditDish() {
     this.router.navigate(['edit'], {relativeTo: this.route});
+  }
+
+  onDeleteDish() {
+    this.dishService.deleteDish(this.id);
+    this.router.navigate(['/dishes']);
   }
 }
