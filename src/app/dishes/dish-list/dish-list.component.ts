@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DishService } from '../../dishes/dish.service';
 import { Dish } from '../dish.model';
@@ -27,5 +27,9 @@ export class DishListComponent implements OnInit {
 
   onNewDish() {
     this.router.navigate(['new'], {relativeTo: this.route});
+  }
+
+  ngOnDestory() {
+    this.subscription.unsubscribe();
   }
 }

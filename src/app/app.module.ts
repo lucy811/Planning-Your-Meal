@@ -12,6 +12,7 @@ import { DishItemComponent } from './dishes/dish-list/dish-item/dish-item.compon
 import { DishDetailComponent } from './dishes/dish-detail/dish-detail.component';
 import { PreparationEditComponent } from './preparation-list/preparation-edit/preparation-edit.component';
 import { PreparationListService } from './preparation-list/preparation-list.service';
+import { DishService } from './dishes/dish.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DishStartComponent } from './dishes/dish-start/dish-start.component';
 import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
@@ -37,7 +38,7 @@ import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [PreparationListService],
+  providers: [PreparationListService, DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

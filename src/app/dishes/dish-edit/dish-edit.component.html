@@ -5,7 +5,7 @@
   </div>
   <div class="dish-edit-row">
     <div class="form-row-name">
-      <label>Image URL</label>
+      <label for="imagePath">Image URL</label>
     </div>
     <div>
       <div *ngIf="imagePath.value !=='' else noImage">
@@ -20,14 +20,14 @@
   <div class="dish-edit-row">
     <div class="form-row-name">
       <div>
-        <label for="name">Name</label>
+        <label for="dishName">Name</label>
       </div>
       <input matInput type="text" id="input" formControlName="dishName" class="form-control">
     </div>
   </div>
   <div class="dish-edit-row">
     <div class="form-row-name">
-      <label>Description</label>
+      <label for="dishDescription">Description</label>
     </div>
     <div>
       <textarea matInput type="text" id="description" rows="10" formControlName="dishDescription"></textarea>
@@ -37,7 +37,7 @@
     <div *ngFor="let ingredientCtrl of getControl(); let i = index" [formGroupName]="i" style="margin-top: 10px;">
       <input type="text" class="form-control" formControlName="ingredientName">
       <input type="text" class="form-control" formControlName="weight">
-      <button mat-mini-fab color="warn">X</button>
+      <button mat-mini-fab color="warn" (click)="onDeleteIngredient(i)">X</button>
     </div>
     <hr>
     <div>
