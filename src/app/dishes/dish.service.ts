@@ -49,4 +49,9 @@ export class DishService {
     this.dishes[index] = dish;
     this.dishesChanged.next(this.dishes.slice());
   }
+
+  deleteDish(index: number) {
+    this.dishes.splice(index, 1);
+    this.dishesChanged.next(this.dishes.slice());
+  }
 }

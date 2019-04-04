@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormArray, FormGroup, FormControl, Validators } from '@angular/forms';
 import { DishService } from '../dish.service';
 import { Dish } from '../dish.model';
@@ -14,7 +14,7 @@ export class DishEditComponent implements OnInit {
   editMode = false;
   dishForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private dishService: DishService) { }
+  constructor(private route: ActivatedRoute, private dishService: DishService, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -71,6 +71,10 @@ export class DishEditComponent implements OnInit {
     )
   }
 
+  onCancel() {
+    this.router.navigate(['../'], {relativeTo: this.route});
+  }
+
   onSubmit() {
     // Convert dishForm value to dish type object
     const value = this.dishForm.value;
@@ -80,5 +84,6 @@ export class DishEditComponent implements OnInit {
     } else {
       this.dishService.addDish(newDish);
     }
+    this.onCancel();
   }
 }

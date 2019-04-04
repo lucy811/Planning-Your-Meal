@@ -1,7 +1,7 @@
 <form class="dish-edit-form" [formGroup]="dishForm" (ngSubmit)="onSubmit()">
   <div class="dish-edit-row">
     <button mat-fab color="primary" type="submit" [disabled]="!dishForm.valid">Save</button>
-    <button mat-fab color="accent">Cancel</button>
+    <button mat-fab color="accent" (click)="onCancel()">Cancel</button>
   </div>
   <div class="dish-edit-row">
     <div class="form-row-name">

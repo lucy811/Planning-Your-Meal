@@ -30,4 +30,9 @@ export class DishDetailComponent implements OnInit {
   onEditDish() {
     this.router.navigate(['edit'], {relativeTo: this.route});
   }
+
+  onDeleteDish() {
+    this.dishService.deleteDish(this.id);
+    this.router.navigate(['/dishes']);
+  }
 }
