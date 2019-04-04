@@ -2,9 +2,12 @@ import { Dish } from '../dishes/dish.model';
 import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { PreparationListService } from '../preparation-list/preparation-list.service';
-
+import { Subject } from 'rxjs';
+ 
 @Injectable()
 export class DishService {
+
+  dishesChanged = new Subject<Dish[]>();
 
   dishes: Dish[] = [
     new Dish('Gongbao Chicken',
@@ -35,5 +38,15 @@ export class DishService {
 
   getDish(index: number) {
     return this.dishes[index];
+  }
+
+  addDish(dish: Dish) {
+    this.dishes.push(dish);
+    this.dishesChanged.next(this.dishes.slice());
+  }
+
+  updateDish(index: number, dish: Dish) {
+    this.dishes[index] = dish;
+    this.dishesChanged.next(this.dishes.slice());
   }
 }
