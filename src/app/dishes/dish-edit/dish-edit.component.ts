@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormArray, FormGroup, FormControl, Validators } from '@angular/forms';
 import { DishService } from '../dish.service';
@@ -14,7 +14,7 @@ export class DishEditComponent implements OnInit {
   editMode = false;
   dishForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private dishService: DishService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private dishService: DishService, private router: Router, public cdRef:ChangeDetectorRef) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -24,6 +24,7 @@ export class DishEditComponent implements OnInit {
       }
     );
     this.initForm();
+    this.cdRef.detectChanges();
   }
 
   initForm() {
