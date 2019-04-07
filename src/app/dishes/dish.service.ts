@@ -27,6 +27,11 @@ export class DishService {
   ];
 
   constructor(private plService: PreparationListService) {}
+  
+  setDishes(dishes: Dish[]) {
+    this.dishes = dishes;
+    this.dishesChanged.next(this.dishes.slice());
+  }
 
   getDishes() {
     return this.dishes.slice();
