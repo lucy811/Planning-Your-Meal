@@ -16,6 +16,8 @@ import { DishService } from './dishes/dish.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DishStartComponent } from './dishes/dish-start/dish-start.component';
 import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
+import { HttpModule } from '@angular/http';
+import { DataStorageService } from './shared/data-storage.service';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,10 @@ import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
     AppRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [PreparationListService, DishService],
+  providers: [PreparationListService, DishService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

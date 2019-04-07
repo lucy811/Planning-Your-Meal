@@ -7,7 +7,7 @@
     <button mat-button [matMenuTriggerFor]="manage" class="manage">Manage</button>
     <mat-menu #manage="matMenu">
       <button mat-menu-item class="manage">Fetch Data</button>
-      <button mat-menu-item class="manage">Save Data</button>
+      <button mat-menu-item class="manage" (click)="onSaveData()">Save Data</button>
     </mat-menu>
   </span>
 </mat-toolbar>
