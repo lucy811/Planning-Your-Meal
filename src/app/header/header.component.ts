@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
       (response: Response) => {
         console.log(response);
       }
-    )
+    );
   }
 
   onFetchData() {
