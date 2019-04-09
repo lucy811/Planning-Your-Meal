@@ -18,6 +18,9 @@ import { DishStartComponent } from './dishes/dish-start/dish-start.component';
 import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
 import { HttpModule } from '@angular/http';
 import { DataStorageService } from './shared/data-storage.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from '../app/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { DataStorageService } from './shared/data-storage.service';
     DishDetailComponent,
     PreparationEditComponent,
     DishStartComponent,
-    DishEditComponent
+    DishEditComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { DataStorageService } from './shared/data-storage.service';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [PreparationListService, DishService, DataStorageService],
+  providers: [PreparationListService, DishService, DataStorageService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
