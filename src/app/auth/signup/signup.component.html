@@ -8,6 +8,6 @@
   </div>
   <input type="password" name="password" ngModel required>
   <div class="sign-button">
-    <button  mat-flat-button color="accent" type="submit">Sign Up</button>
+    <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">Sign Up</button>
   </div>
 </form>
