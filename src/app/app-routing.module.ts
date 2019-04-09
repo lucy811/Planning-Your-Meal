@@ -8,6 +8,7 @@ import { DishDetailComponent } from './dishes/dish-detail/dish-detail.component'
 import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { AuthGuard } from '../app/auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/dishes', pathMatch: 'full' },
@@ -15,9 +16,9 @@ const appRoutes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'dishes', component: DishesComponent, children: [
     { path: '', component: DishStartComponent },
-    { path: 'new', component: DishEditComponent },
+    { path: 'new', component: DishEditComponent, canActivate:[AuthGuard] },
     { path: ':id', component: DishDetailComponent },
-    { path: ':id/edit', component: DishEditComponent }
+    { path: ':id/edit', component: DishEditComponent, canActivate:[AuthGuard] }
   ]},
   { path: 'preparation-list', component: PreparationListComponent },
 ];

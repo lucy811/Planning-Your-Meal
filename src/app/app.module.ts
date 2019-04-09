@@ -21,6 +21,7 @@ import { DataStorageService } from './shared/data-storage.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from '../app/auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { AuthService } from '../app/auth/auth.service';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [PreparationListService, DishService, DataStorageService, AuthService],
+  providers: [PreparationListService, DishService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
