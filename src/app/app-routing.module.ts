@@ -7,9 +7,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/dishes', pathMatch: 'full' },
-  { path: 'signup', component: SignupComponent },
-  { path: 'signin', component: SigninComponent },
-  { path: 'preparation-list', component: PreparationListComponent },
+  { path: 'preparation-list', component: PreparationListComponent }
 ];
 
 @NgModule({
