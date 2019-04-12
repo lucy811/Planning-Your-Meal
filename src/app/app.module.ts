@@ -5,23 +5,16 @@ import { MaterialModule } from './shared/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HeaderComponent } from './header/header.component';
-import { PreparationListService } from './preparation-list/preparation-list.service';
-import { DishService } from './dishes/dish.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DataStorageService } from './shared/data-storage.service';
-import { AuthService } from '../app/auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { PreparationListModule } from './preparation-list/preparation-list.module';
 import { AuthModule } from '../app/auth/auth.module';
-import { HomeComponent } from './home/home.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +22,12 @@ import { HomeComponent } from './home/home.component';
     MaterialModule,
     FormsModule,
     HttpModule,
+    CoreModule,
     PreparationListModule,
     AuthModule,
     AppRoutingModule
   ],
-  providers: [PreparationListService, DishService, DataStorageService, AuthService, AuthGuard],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
