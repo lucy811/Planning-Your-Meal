@@ -13,14 +13,15 @@ import { HttpModule } from '@angular/http';
 import { DataStorageService } from './shared/data-storage.service';
 import { AuthService } from '../app/auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
-import { DishesModule } from './dishes/dishes.module';
 import { PreparationListModule } from './preparation-list/preparation-list.module';
 import { AuthModule } from '../app/auth/auth.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,6 @@ import { AuthModule } from '../app/auth/auth.module';
     FormsModule,
     HttpModule,
     PreparationListModule,
-    DishesModule,
     AuthModule,
     AppRoutingModule
   ],

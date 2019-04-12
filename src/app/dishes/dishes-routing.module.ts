@@ -8,7 +8,7 @@ import { DishDetailComponent } from './dish-detail/dish-detail.component';
 import { DishEditComponent } from './dish-edit/dish-edit.component';
 
 const dishesRoutes: Routes = [
-  { path: 'dishes', component: DishesComponent, children: [
+  { path: '', component: DishesComponent, children: [
     { path: '', component: DishStartComponent },
     { path: 'new', component: DishEditComponent, canActivate: [AuthGuard] },
     { path: ':id', component: DishDetailComponent },

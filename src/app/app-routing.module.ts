@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PreparationListComponent } from './preparation-list/preparation-list.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './auth/signin/signin.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/dishes', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
+  { path: 'dishes', loadChildren: './dishes/dishes.module#DishesModule'},
   { path: 'preparation-list', component: PreparationListComponent }
 ];
 
