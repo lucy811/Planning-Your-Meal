@@ -4,48 +4,38 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DishesComponent } from './dishes/dishes.component';
+
 import { HeaderComponent } from './header/header.component';
 import { PreparationListComponent } from './preparation-list/preparation-list.component';
-import { DishListComponent } from './dishes/dish-list/dish-list.component';
-import { DishItemComponent } from './dishes/dish-list/dish-item/dish-item.component';
-import { DishDetailComponent } from './dishes/dish-detail/dish-detail.component';
 import { PreparationEditComponent } from './preparation-list/preparation-edit/preparation-edit.component';
 import { PreparationListService } from './preparation-list/preparation-list.service';
 import { DishService } from './dishes/dish.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DishStartComponent } from './dishes/dish-start/dish-start.component';
-import { DishEditComponent } from './dishes/dish-edit/dish-edit.component';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DataStorageService } from './shared/data-storage.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from '../app/auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
+import { DishesModule } from './dishes/dishes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DishesComponent,
     HeaderComponent,
     PreparationListComponent,
-    DishListComponent,
-    DishItemComponent,
-    DishDetailComponent,
     PreparationEditComponent,
-    DishStartComponent,
-    DishEditComponent,
     SignupComponent,
     SigninComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    DishesModule,
+    AppRoutingModule
   ],
   providers: [PreparationListService, DishService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
