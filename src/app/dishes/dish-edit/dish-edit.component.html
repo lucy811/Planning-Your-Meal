@@ -35,7 +35,7 @@
   </div>
   <div class="dish-edit-row" formArrayName="ingredients">
     <div *ngFor="let ingredientCtrl of getControl(); let i = index" [formGroupName]="i" style="margin-top: 10px;">
-      <input type="text" class="form-control" formControlName="ingredientName">
+      <input type="text" class="form-control" formControlName="name">
       <input type="text" class="form-control" formControlName="weight">
       <button mat-mini-fab color="warn" (click)="onDeleteIngredient(i)">X</button>
     </div>

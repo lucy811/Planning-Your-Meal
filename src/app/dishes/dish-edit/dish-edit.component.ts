@@ -43,7 +43,7 @@ export class DishEditComponent implements OnInit {
         for (const ingredient of dish.ingredients) {
           dishIngredients.push (
             new FormGroup({
-              ingredientName: new FormControl(ingredient.name, Validators.required),
+              name: new FormControl(ingredient.name, Validators.required),
               weight: new FormControl(ingredient.weight, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
             })
           );
@@ -66,7 +66,7 @@ export class DishEditComponent implements OnInit {
   onAddIngredient() {
     (this.dishForm.get('ingredients') as FormArray).push (
       new FormGroup({
-        ingredientName: new FormControl(null, Validators.required),
+        name: new FormControl(null, Validators.required),
         weight: new FormControl(null, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
       })
     );
