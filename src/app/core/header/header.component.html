@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <span class="mean-plan" routerLinkActive="active"><a routerLink="/">Meal Plan</a></span>
+  <span class="header" routerLinkActive="active"><a routerLink="/dishes">Dishes</a></span>
+  <span class="header" routerLinkActive="active"><a routerLink="/preparation-list">Preparation List</a></span>
+
+  <span class="menu" *ngIf="isAuthenticated()">
+    <button mat-button [matMenuTriggerFor]="manage" class="manage">Manage</button>
+    <mat-menu #manage="matMenu">
+      <button mat-menu-item class="manage" (click)="onFetchData()">Fetch Data</button>
+      <button mat-menu-item class="manage" (click)="onSaveData()">Save Data</button>
+    </mat-menu>
+    <span (click)="onLogout()" class="register" style="cursor: pointer;">Logout</span>
+  </span>
+ 
+  <span class="manage-button" *ngIf="!isAuthenticated()">
+    <span class="register"><a routerLink="/signup">Register</a></span>
+    <span class="register"><a routerLink="/signin">Login</a></span>
+  </span>
+</mat-toolbar>

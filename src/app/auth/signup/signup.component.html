@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSignup(f)" #f="ngForm" class="sign-form">
+  <div>
+    <label for="email">Mail</label>
+  </div>
+  <input type="email" name="email" ngModel required>
+  <div>
+    <label for="password">Password</label>
+  </div>
+  <input type="password" name="password" ngModel required>
+  <div class="sign-button">
+    <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">Sign Up</button>
+  </div>
+</form>
