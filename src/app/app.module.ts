@@ -11,6 +11,8 @@ import { AuthGuard } from './auth/auth-guard.service';
 import { PreparationListModule } from './preparation-list/preparation-list.module';
 import { AuthModule } from '../app/auth/auth.module';
 import { CoreModule } from './core/core.module';
+import { StoreModule } from '@ngrx/store';
+import { preparationListReducer } from './preparation-list/store/preparation-list.reducers';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     PreparationListModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({preparationList: preparationListReducer})
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

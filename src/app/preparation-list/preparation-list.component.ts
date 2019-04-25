@@ -1,6 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
-import { PreparationListService } from '../preparation-list/preparation-list.service';
+import { PreparationListService } from './preparation-list.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -8,26 +10,17 @@ import { Subscription } from 'rxjs';
   templateUrl: './preparation-list.component.html',
   styleUrls: ['./preparation-list.component.scss']
 })
-export class PreparationListComponent implements OnInit, OnDestroy {
-  ingredients: Ingredient[];
-  subscription: Subscription;
+export class PreparationListComponent implements OnInit {
 
-  constructor(private plService: PreparationListService) { }
+  preparationListState: Observable<{ingredients: Ingredient[]}>;
+
+  constructor(private plService: PreparationListService, private store: Store<{preparationList: {ingredients: Ingredient[]}}>) { }
 
   ngOnInit() {
-    this.ingredients = this.plService.getIngredients();
-    this.subscription = this.plService.ingredientsChanged
-    .subscribe (
-      (ingredients: Ingredient[]) => {
-        this.ingredients = ingredients;
-      }
-    );
+    this.preparationListState = this.store.select('preparationList');
   }
 
   onEditItem(index: number) {
     this.plService.startedEditing.next(index);
-  }
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 }

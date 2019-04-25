@@ -1,7 +1,7 @@
 <div id="preparation-list-style">
   <app-preparation-edit></app-preparation-edit>
     <mat-nav-list>
-      <mat-list-item  id ="list-item-style" *ngFor="let ingredient of ingredients; let i = index" (click)="onEditItem(i)">
+      <mat-list-item  id ="list-item-style" *ngFor="let ingredient of (preparationListState| async).ingredients; let i = index" (click)="onEditItem(i)">
         {{ ingredient.name }} ({{ ingredient.weight }})
       </mat-list-item>
     </mat-nav-list>
