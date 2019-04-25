@@ -15,6 +15,11 @@ export function preparationListReducer(state = initalState, action: PreparationL
         ...state,
         ingredients: [...state.ingredients, action.payload]
       };
+    case PreparationListActions.ADD_INGREDIENTS:
+      return {
+        ...state,
+        ingredients: [...state.ingredients, ...action.payload]
+      };
     default:
     return state;
   }

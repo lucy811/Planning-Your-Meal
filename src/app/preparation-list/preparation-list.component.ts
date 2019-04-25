@@ -3,7 +3,6 @@ import { Ingredient } from '../shared/ingredient.model';
 import { PreparationListService } from './preparation-list.service';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-preparation-list',

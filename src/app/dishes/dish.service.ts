@@ -1,10 +1,7 @@
 import { Dish } from '../dishes/dish.model';
-import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
-import { PreparationListService } from '../preparation-list/preparation-list.service';
 import { Subject } from 'rxjs';
 
-@Injectable()
 export class DishService {
 
   dishesChanged = new Subject<Dish[]>();
@@ -26,8 +23,6 @@ export class DishService {
              ]),
   ];
 
-  constructor(private plService: PreparationListService) {}
-
   setDishes(dishes: Dish[]) {
     this.dishes = dishes;
     this.dishesChanged.next(this.dishes.slice());
@@ -35,10 +30,6 @@ export class DishService {
 
   getDishes() {
     return this.dishes.slice();
-  }
-
-  addIngredientsToShoppingList(dish: Dish) {
-    this.plService.addIngredients(dish.ingredients.slice());
   }
 
   getDish(index: number) {

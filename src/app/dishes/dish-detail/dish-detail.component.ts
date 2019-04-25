@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Dish } from '../dish.model';
 import { DishService } from '../../dishes/dish.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Ingredient } from '../../shared/ingredient.model';
+import * as PreparationListActions from '../../preparation-list/store/preparation-list.actions';
 
 @Component({
   selector: 'app-dish-detail',
@@ -12,7 +15,7 @@ export class DishDetailComponent implements OnInit {
   @Input() dish: Dish;
   id: number;
 
-  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute, private store: Store<{preparationList: {ingredients: Ingredient[]}}>) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -24,7 +27,8 @@ export class DishDetailComponent implements OnInit {
   }
 
   addIngredientsToList() {
-    this.dishService.addIngredientsToShoppingList(this.dish);
+    // add ingredients
+    this.store.dispatch(new PreparationListActions.AddIngredients(this.dish.ingredients));
   }
 
   onEditDish() {
