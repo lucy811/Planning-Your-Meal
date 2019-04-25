@@ -3,8 +3,8 @@ import { Dish } from '../dish.model';
 import { DishService } from '../../dishes/dish.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Ingredient } from '../../shared/ingredient.model';
 import * as PreparationListActions from '../../preparation-list/store/preparation-list.actions';
+import * as fromPreprationList from '../../preparation-list/store/preparation-list.reducers';
 
 @Component({
   selector: 'app-dish-detail',
@@ -15,7 +15,7 @@ export class DishDetailComponent implements OnInit {
   @Input() dish: Dish;
   id: number;
 
-  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute, private store: Store<{preparationList: {ingredients: Ingredient[]}}>) { }
+  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute, private store: Store<fromPreprationList.AppState>) { }
 
   ngOnInit() {
     this.route.params.subscribe(
