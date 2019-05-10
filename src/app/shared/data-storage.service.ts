@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest } from '@angular/common/http';
 import { DishService } from '../dishes/dish.service';
 import { AuthService } from '../auth/auth.service';
 import { Dish } from '../dishes/dish.model';
@@ -10,13 +10,15 @@ export class DataStorageService {
   constructor(private httpClient: HttpClient, private dishService: DishService, private authService: AuthService) {}
 
   storeDishes() {
-    const token = this.authService.getToken();
-    return this.httpClient.put('https://meal-plan-application.firebaseio.com/dishes.json?auth=' + token, this.dishService.getDishes());
+    const req = new HttpRequest('PUT', 'https://meal-plan-application.firebaseio.com/dishes.json', this.dishService.getDishes(), {reportProgress: true});
+    return this.httpClient.request(req);
   }
 
   getDishes() {
-    const token = this.authService.getToken();
-    this.httpClient.get<Dish[]>('https://meal-plan-application.firebaseio.com/dishes.json?auth=' + token).map(
+    this.httpClient.get<Dish[]>('https://meal-plan-application.firebaseio.com/dishes.json', {
+      observe: 'body',
+      responseType: 'json'
+    }).map(
       (dishes) => {
         for (const dish of dishes) {
           if (!dish.ingredients) {

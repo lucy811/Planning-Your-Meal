@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Ingredient } from '../../shared/ingredient.model';
 import * as PreparationListActions from '../store/preparation-list.actions';
-import * as fromPreprationList from '../store/preparation-list.reducers';
 import { NgForm } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
+import * as fromApp from '../../store/app.reducers';
 
 @Component({
   selector: 'app-preparation-edit',
@@ -17,7 +17,7 @@ export class PreparationEditComponent implements OnInit, OnDestroy {
   editedItem: Ingredient;
   @ViewChild('f') plForm: NgForm;
 
-  constructor(private store: Store<fromPreprationList.AppState>) { }
+  constructor(private store: Store<fromApp.AppState>) { }
 
   ngOnInit() {
     this.subscription = this.store.select('preparationList')
