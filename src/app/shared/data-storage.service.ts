@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest } from '@angular/common/http';
 import { DishService } from '../dishes/dish.service';
-import { AuthService } from '../auth/auth.service';
 import { Dish } from '../dishes/dish.model';
 import 'rxjs/Rx';
 
 @Injectable()
 export class DataStorageService {
-  constructor(private httpClient: HttpClient, private dishService: DishService, private authService: AuthService) {}
+  constructor(private httpClient: HttpClient, private dishService: DishService) {}
 
   storeDishes() {
     const req = new HttpRequest('PUT', 'https://meal-plan-application.firebaseio.com/dishes.json', this.dishService.getDishes(), {reportProgress: true});
