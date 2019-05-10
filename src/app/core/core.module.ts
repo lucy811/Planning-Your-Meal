@@ -7,7 +7,6 @@ import { AppRoutingModule } from '../app-routing.module';
 
 import { DishService } from '../dishes/dish.service';
 import { DataStorageService } from '../shared/data-storage.service';
-import { AuthService } from '../../app/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { AuthService } from '../../app/auth/auth.service';
   ],
   providers: [
     DishService,
-    DataStorageService,
-    AuthService
+    DataStorageService
   ]
 })
 
