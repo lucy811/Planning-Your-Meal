@@ -3,6 +3,8 @@ import { Dish } from '../dish.model';
 import { DishService } from '../../dishes/dish.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import * as fromDish from '../store/dish.reducers';
 import * as PreparationListActions from '../../preparation-list/store/preparation-list.actions';
 import * as fromApp from '../../store/app.reducers';
 

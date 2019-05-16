@@ -9,6 +9,8 @@ import { DishStartComponent } from './dish-start/dish-start.component';
 import { DishEditComponent } from './dish-edit/dish-edit.component';
 import { DishesRoutingModule } from './dishes-routing.module';
 import { MaterialModule } from '../shared/material.module';
+import { StoreModule } from '@ngrx/store';
+import { dishReducer } from './store/dish.reducers';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { MaterialModule } from '../shared/material.module';
     MaterialModule,
     CommonModule,
     ReactiveFormsModule,
-    DishesRoutingModule
+    DishesRoutingModule,
+    StoreModule.forFeature('dishes', dishReducer),
   ]
 })
 

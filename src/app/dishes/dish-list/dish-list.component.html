@@ -3,5 +3,5 @@
 </div>
 <hr>
 <div>
-  <app-dish-item  *ngFor="let dish of dishes; let i = index" [index]="i" [dish]="dish"></app-dish-item>
+  <app-dish-item  *ngFor="let dish of (dishState | async).dishes; let i = index" [index]="i" [dish]="dish"></app-dish-item>
 </div>
