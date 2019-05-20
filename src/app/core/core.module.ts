@@ -5,9 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../shared/material.module';
 import { AppRoutingModule } from '../app-routing.module';
 
-import { DishService } from '../dishes/dish.service';
-import { DataStorageService } from '../shared/data-storage.service';
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,10 +19,7 @@ import { DataStorageService } from '../shared/data-storage.service';
     AppRoutingModule,
     HeaderComponent
   ],
-  providers: [
-    DishService,
-    DataStorageService
-  ]
+  providers: []
 })
 
 export class CoreModule { }

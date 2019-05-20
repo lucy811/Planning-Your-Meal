@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormArray, FormGroup, FormControl, Validators } from '@angular/forms';
-import { DishService } from '../dish.service';
 import { Dish } from '../dish.model';
 import { Store } from '@ngrx/store';
 import * as DishActions from '../store/dish.actions';
@@ -17,7 +16,7 @@ export class DishEditComponent implements OnInit {
   editMode = false;
   dishForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private dishService: DishService, private router: Router, public cdRef: ChangeDetectorRef, private store: Store<fromDish.FeatureState>) { }
+  constructor(private route: ActivatedRoute, private router: Router, public cdRef: ChangeDetectorRef, private store: Store<fromDish.FeatureState>) { }
 
   ngOnInit() {
     this.route.params.subscribe(

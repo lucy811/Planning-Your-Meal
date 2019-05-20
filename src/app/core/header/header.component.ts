@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataStorageService } from '../../shared/data-storage.service';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import * as AuthActions from '../../auth/store/auth.actions';
@@ -14,7 +13,7 @@ import * as DishActions from '../../dishes/store/dish.actions';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private dataStorageService: DataStorageService, private store: Store<fromApp.AppState>) { }
+  constructor(private store: Store<fromApp.AppState>) { }
 
   authState: Observable<fromAuth.State>;
 

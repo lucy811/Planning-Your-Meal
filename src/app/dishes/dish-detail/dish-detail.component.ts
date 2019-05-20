@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DishService } from '../../dishes/dish.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
@@ -7,6 +6,7 @@ import * as fromDish from '../store/dish.reducers';
 import * as PreparationListActions from '../../preparation-list/store/preparation-list.actions';
 import * as fromApp from '../../store/app.reducers';
 import * as DishActions from '../store/dish.actions';
+import 'rxjs/add/operator/take';
 
 @Component({
   selector: 'app-dish-detail',
@@ -17,7 +17,7 @@ export class DishDetailComponent implements OnInit {
   id: number;
   dishState: Observable<fromDish.State>;
 
-  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute, private store: Store<fromDish.FeatureState>) { }
+  constructor(private router: Router, private route: ActivatedRoute, private store: Store<fromDish.FeatureState>) { }
 
   ngOnInit() {
     this.route.params.subscribe(
