@@ -5,6 +5,8 @@ export const SET_DISHES = 'SET_DISHES';
 export const ADD_DISH = 'ADD_DISH';
 export const UPDATE_DISH = 'UPDATE_DISH';
 export const DELETE_DISH = 'DELETE_DISH';
+export const STORE_DISHES = 'STORE_DISHES';
+export const FETCH_DISHES = 'FETCH_DISHES';
 
 export class SetDishes implements Action {
   readonly type = SET_DISHES;
@@ -30,4 +32,12 @@ export class DeleteDish implements Action {
   constructor(public payload: number) {}
 }
 
-export type DishActions = SetDishes | AddDish | UpdateDish | DeleteDish;
+export class StoreDishes implements Action {
+  readonly type = STORE_DISHES;
+}
+
+export class FetchDishes implements Action {
+  readonly type = FETCH_DISHES;
+}
+
+export type DishActions = SetDishes | AddDish | UpdateDish | DeleteDish | StoreDishes | FetchDishes;

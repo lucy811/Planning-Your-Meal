@@ -11,6 +11,8 @@ import { DishesRoutingModule } from './dishes-routing.module';
 import { MaterialModule } from '../shared/material.module';
 import { StoreModule } from '@ngrx/store';
 import { dishReducer } from './store/dish.reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { DishEffects } from './store/dish.effects';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { dishReducer } from './store/dish.reducers';
     ReactiveFormsModule,
     DishesRoutingModule,
     StoreModule.forFeature('dishes', dishReducer),
+    EffectsModule.forFeature([DishEffects])
   ]
 })
 
