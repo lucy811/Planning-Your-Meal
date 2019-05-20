@@ -49,14 +49,14 @@ export function dishReducer(state = initialState, action: DishActions.DishAction
         ...action.payload.updatedDish
       };
       const dishes = [...state.dishes];
-            dishes[action.payload.index] = updatedDish;
+      dishes[action.payload.index] = updatedDish;
       return {
         ...state,
         dishes: dishes
       };
     case (DishActions.DELETE_DISH):
       const oldDishes = [...state.dishes];
-            oldDishes.splice(action.payload, 1);
+      oldDishes.splice(action.payload, 1);
       return {
         ...state,
         dishes: oldDishes

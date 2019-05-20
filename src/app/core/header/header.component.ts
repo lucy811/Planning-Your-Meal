@@ -23,11 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onSaveData() {
-    this.dataStorageService.storeDishes().subscribe(
-      (response) => {
-        console.log(response);
-      }
-    );
+    this.store.dispatch(new DishActions.StoreDishes());
   }
 
   onFetchData() {

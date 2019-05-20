@@ -34,7 +34,7 @@ export class DishDetailComponent implements OnInit {
     .subscribe((dishState: fromDish.State) => {
       // add ingredients
       this.store.dispatch(new PreparationListActions.AddIngredients(dishState.dishes[this.id].ingredients));
-    })
+    });
   }
 
   onEditDish() {
