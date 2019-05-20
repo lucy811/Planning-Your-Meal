@@ -1,8 +1,9 @@
 import { Dish } from '../dish.model';
 import { Ingredient } from '../../shared/ingredient.model';
 import * as DishActions from './dish.actions';
+import * as fromApp from '../../store/app.reducers';
 
-export interface FeatureState {
+export interface FeatureState extends fromApp.AppState {
   dishes: State;
 }
 

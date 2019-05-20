@@ -1,6 +1,6 @@
 <div class="dish-detail">
-  <img id="dish-image" [src]="dish.imagePath" alt="{{ dish.name }}">
-  <h1>{{ dish.name }}</h1>
+  <img id="dish-image" [src]="(dishState | async).dishes[id].imagePath" alt="{{ (dishState | async).dishes[id].name }}">
+  <h1>{{ (dishState | async).dishes[id].name }}</h1>
   <button mat-button [matMenuTriggerFor]="menu" id="manage-dish">Manage Dish</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item id="manage" (click)="addIngredientsToList()">To Preparation List</button>
@@ -9,7 +9,7 @@
   </mat-menu>
   <div>
     <mat-list>
-      <mat-list-item id="items-list-item" *ngFor="let ingredient of dish.ingredients">
+      <mat-list-item id="items-list-item" *ngFor="let ingredient of (dishState | async).dishes[id].ingredients">
         {{ ingredient.name }} - {{ ingredient.weight }}
       </mat-list-item>
     </mat-list>
