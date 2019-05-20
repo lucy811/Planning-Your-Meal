@@ -3,6 +3,9 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormArray, FormGroup, FormControl, Validators } from '@angular/forms';
 import { DishService } from '../dish.service';
 import { Dish } from '../dish.model';
+import { Store } from '@ngrx/store';
+import * as DishActions from '../store/dish.actions';
+import * as fromDish from '../store/dish.reducers';
 
 @Component({
   selector: 'app-dish-edit',
@@ -14,7 +17,7 @@ export class DishEditComponent implements OnInit {
   editMode = false;
   dishForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private dishService: DishService, private router: Router, public cdRef: ChangeDetectorRef) { }
+  constructor(private route: ActivatedRoute, private dishService: DishService, private router: Router, public cdRef: ChangeDetectorRef, private store: Store<fromDish.FeatureState>) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -28,33 +31,39 @@ export class DishEditComponent implements OnInit {
   }
 
   initForm() {
-    let dishName = '';
+    let name = '';
     let imagePath = '';
-    let dishDescription = '';
+    let description = '';
     const dishIngredients = new FormArray([]);
 
     if (this.editMode) {
-      const dish = this.dishService.getDish(this.id);
-      dishName = dish.name;
-      imagePath = dish.imagePath;
-      dishDescription = dish.description;
+      this.store.select('dishes')
+        .take(1)
+        .subscribe((dishState: fromDish.State) => {
+          const dish = dishState.dishes[this.id];
+          name = dish.name;
+          imagePath = dish.imagePath;
+          description = dish.description;
 
-      if (dish.ingredients) {
-        for (const ingredient of dish.ingredients) {
-          dishIngredients.push (
-            new FormGroup({
-              name: new FormControl(ingredient.name, Validators.required),
-              weight: new FormControl(ingredient.weight, [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)])
-            })
-          );
-        }
-      }
+          if (dish['ingredients']) {
+            for (const ingredient of dish.ingredients) {
+              dishIngredients.push (
+                new FormGroup({
+                  name: new FormControl(ingredient.name, Validators.required),
+                  weight: new FormControl(ingredient.weight, [
+                    Validators.required,
+                    Validators.pattern(/^[1-9]+[0-9]*$/)])
+                })
+              );
+            }
+          }
+        });
     }
 
     this.dishForm = new FormGroup({
-      dishName: new FormControl(dishName, Validators.required),
+      name: new FormControl(name, Validators.required),
       imagePath: new FormControl(imagePath, Validators.required),
-      dishDescription: new FormControl(dishDescription, Validators.required),
+      description: new FormControl(description, Validators.required),
       ingredients: dishIngredients,
     });
   }
@@ -81,13 +90,13 @@ export class DishEditComponent implements OnInit {
   }
 
   onSubmit() {
-    // Convert dishForm value to dish type object
-    const value = this.dishForm.value;
-    const newDish = new Dish(value.dishName, value.dishDescription, value.imagePath, value.ingredients);
     if (this.editMode) {
-      this.dishService.updateDish(this.id, newDish);
+      this.store.dispatch(new DishActions.UpdateDish({
+        index: this.id,
+        updatedDish: this.dishForm.value
+      }));
     } else {
-      this.dishService.addDish(newDish);
+      this.store.dispatch(new DishActions.AddDish(this.dishForm.value));
     }
     this.onCancel();
   }
