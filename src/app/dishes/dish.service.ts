@@ -31,23 +31,4 @@ export class DishService {
   getDishes() {
     return this.dishes.slice();
   }
-
-  getDish(index: number) {
-    return this.dishes[index];
-  }
-
-  addDish(dish: Dish) {
-    this.dishes.push(dish);
-    this.dishesChanged.next(this.dishes.slice());
-  }
-
-  updateDish(index: number, dish: Dish) {
-    this.dishes[index] = dish;
-    this.dishesChanged.next(this.dishes.slice());
-  }
-
-  deleteDish(index: number) {
-    this.dishes.splice(index, 1);
-    this.dishesChanged.next(this.dishes.slice());
-  }
 }

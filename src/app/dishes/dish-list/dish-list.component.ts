@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DishService } from '../../dishes/dish.service';
-import { Dish } from '../dish.model';
-import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import * as fromDish from '../store/dish.reducers';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dish-list',
@@ -10,26 +10,15 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./dish-list.component.scss']
 })
 export class DishListComponent implements OnInit {
-  dishes: Dish[];
-  subscription: Subscription;
+  dishState: Observable<fromDish.State>;
 
-  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private store: Store<fromDish.FeatureState>) { }
 
   ngOnInit() {
-    this.subscription = this.dishService.dishesChanged
-      .subscribe(
-        (dishes: Dish[]) => {
-            this.dishes = dishes;
-        },
-      );
-    this.dishes = this.dishService.getDishes();
+    this.dishState = this.store.select('dishes');
   }
 
   onNewDish() {
     this.router.navigate(['new'], {relativeTo: this.route});
-  }
-
-  ngOnDestory() {
-    this.subscription.unsubscribe();
   }
 }

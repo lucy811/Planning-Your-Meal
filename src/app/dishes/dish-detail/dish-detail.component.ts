@@ -1,10 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Dish } from '../dish.model';
-import { DishService } from '../../dishes/dish.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as fromDish from '../store/dish.reducers';
 import * as PreparationListActions from '../../preparation-list/store/preparation-list.actions';
 import * as fromApp from '../../store/app.reducers';
+import * as DishActions from '../store/dish.actions';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dish-detail',
@@ -12,23 +14,27 @@ import * as fromApp from '../../store/app.reducers';
   styleUrls: ['./dish-detail.component.scss']
 })
 export class DishDetailComponent implements OnInit {
-  @Input() dish: Dish;
   id: number;
+  dishState: Observable<fromDish.State>;
 
-  constructor(private dishService: DishService, private router: Router, private route: ActivatedRoute, private store: Store<fromApp.AppState>) { }
+  constructor(private router: Router, private route: ActivatedRoute, private store: Store<fromDish.FeatureState>) { }
 
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
         this.id = + params.id;
-        this.dish = this.dishService.getDish(this.id);
+        this.dishState = this.store.select('dishes');
       }
     );
   }
 
   addIngredientsToList() {
-    // add ingredients
-    this.store.dispatch(new PreparationListActions.AddIngredients(this.dish.ingredients));
+    this.store.select('dishes')
+    .pipe(take(1))
+    .subscribe((dishState: fromDish.State) => {
+      // add ingredients
+      this.store.dispatch(new PreparationListActions.AddIngredients(dishState.dishes[this.id].ingredients));
+    });
   }
 
   onEditDish() {
@@ -36,7 +42,7 @@ export class DishDetailComponent implements OnInit {
   }
 
   onDeleteDish() {
-    this.dishService.deleteDish(this.id);
+    this.store.dispatch(new DishActions.DeleteDish(this.id));
     this.router.navigate(['/dishes']);
   }
 }
