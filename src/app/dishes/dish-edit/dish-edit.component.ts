@@ -5,6 +5,7 @@ import { Dish } from '../dish.model';
 import { Store } from '@ngrx/store';
 import * as DishActions from '../store/dish.actions';
 import * as fromDish from '../store/dish.reducers';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dish-edit',
@@ -37,7 +38,7 @@ export class DishEditComponent implements OnInit {
 
     if (this.editMode) {
       this.store.select('dishes')
-        .take(1)
+        .pipe(take(1))
         .subscribe((dishState: fromDish.State) => {
           const dish = dishState.dishes[this.id];
           name = dish.name;

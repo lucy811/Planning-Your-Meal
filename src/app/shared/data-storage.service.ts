@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest } from '@angular/common/http';
 import { DishService } from '../dishes/dish.service';
 import { Dish } from '../dishes/dish.model';
+import { map } from 'rxjs/operators';
 import 'rxjs/Rx';
 
 @Injectable()
@@ -17,7 +18,7 @@ export class DataStorageService {
     this.httpClient.get<Dish[]>('https://meal-plan-application.firebaseio.com/dishes.json', {
       observe: 'body',
       responseType: 'json'
-    }).map(
+    }).pipe(map(
       (dishes) => {
         for (const dish of dishes) {
           if (!dish.ingredients) {
@@ -26,7 +27,7 @@ export class DataStorageService {
         }
         return dishes;
       }
-    ).subscribe(
+    )).subscribe(
       (dishes: Dish[]) => {
         this.dishService.setDishes(dishes);
       }

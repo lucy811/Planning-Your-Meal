@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/withLatestFrom';
+import { switchMap, withLatestFrom, map } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import * as fromDish from '../store/dish.reducers';
 
@@ -15,13 +13,13 @@ export class DishEffects {
 @Effect()
 dishFetch = this.action$
    .pipe(ofType(DishActions.FETCH_DISHES))
-   .switchMap((action: DishActions.FetchDishes) => {
+   .pipe(switchMap((action: DishActions.FetchDishes) => {
       return this.httpClient.get<Dish[]>('https://meal-plan-application.firebaseio.com/dishes.json', {
         observe: 'body',
         responseType: 'json'
       });
    })
-   .map(
+   ,map(
     (dishes) => {
       for (const dish of dishes) {
         if (!dish['ingredients']) {
@@ -34,17 +32,17 @@ dishFetch = this.action$
         payload: dishes
       };
     }
-   );
+   ));
 
   @Effect({dispatch: false })
   dishStore = this.action$
     .pipe(ofType(DishActions.STORE_DISHES))
-    .withLatestFrom(this.store.select('dishes'))
-    .switchMap(([action, state]) => {
+    .pipe(withLatestFrom(this.store.select('dishes')),
+    switchMap(([action, state]) => {
       const req = new HttpRequest('PUT', 'https://meal-plan-application.firebaseio.com/dishes.json',
         state.dishes, {reportProgress: true});
         return this.httpClient.request(req);
-    });
+    }));
 
   constructor(private action$: Actions, private httpClient: HttpClient, private store: Store<fromDish.FeatureState>) {}
 }
