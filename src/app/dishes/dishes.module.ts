@@ -9,6 +9,7 @@ import { DishStartComponent } from './dish-start/dish-start.component';
 import { DishEditComponent } from './dish-edit/dish-edit.component';
 import { DishesRoutingModule } from './dishes-routing.module';
 import { MaterialModule } from '../shared/material.module';
+import { BetterHighlightDirective } from '../shared/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MaterialModule } from '../shared/material.module';
     DishItemComponent,
     DishDetailComponent,
     DishStartComponent,
-    DishEditComponent
+    DishEditComponent,
+    BetterHighlightDirective
   ],
   imports: [
     MaterialModule,
