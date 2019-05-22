@@ -8,6 +8,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { PreparationListService } from '../preparation-list/preparation-list.service';
 import { DishService } from '../dishes/dish.service';
 import { DataStorageService } from '../shared/data-storage.service';
+import { ContactUsService } from '../contact-us/contact-us.service';
 import { AuthService } from '../../app/auth/auth.service';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AuthService } from '../../app/auth/auth.service';
     PreparationListService,
     DishService,
     DataStorageService,
+    ContactUsService,
     AuthService
   ]
 })

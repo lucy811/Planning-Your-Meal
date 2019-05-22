@@ -5,6 +5,7 @@ import { MaterialModule } from './shared/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactUsModule } from './contact-us/contact-us.module';
 
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './auth/auth-guard.service';
@@ -25,7 +26,8 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     PreparationListModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ContactUsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
