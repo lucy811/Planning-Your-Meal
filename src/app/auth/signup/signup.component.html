@@ -2,11 +2,29 @@
   <div>
     <label for="email">Mail</label>
   </div>
-  <input type="email" name="email" ngModel required>
+  <input type="email" name="email" #email="ngModel" ngModel email required>
+  <div style="color:red" 
+    *ngIf="email.errors && (email.dirty || email.touched || f.submitted)">
+    <p *ngIf="email.errors.required">
+        The email is required
+    </p>
+    <p *ngIf="email.errors.email">
+      The email must be correct format
+    </p>
+  </div>
   <div>
     <label for="password">Password</label>
   </div>
-  <input type="password" name="password" ngModel required>
+  <input type="password" name="password" #password ="ngModel" ngModel minlength="6" required>
+  <div style="color:red" 
+    *ngIf="password.errors && (password.dirty || password.touched || f.submitted)">
+    <p *ngIf="password.errors.required">
+      Password is required
+    </p>
+    <p *ngIf="password.errors.minlength">
+      Password must be at least 6 characters long
+    </p>
+  </div>
   <div class="sign-button">
     <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">Sign Up</button>
   </div>
