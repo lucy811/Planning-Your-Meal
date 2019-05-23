@@ -5,6 +5,7 @@ import { SignupComponent } from '../auth/signup/signup.component';
 import { SigninComponent } from '../auth/signin/signin.component';
 import { AuthRoutingModule } from '../auth/auth-routing.module';
 import { MaterialModule } from '../shared/material.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { MaterialModule } from '../shared/material.module';
   imports: [
     FormsModule,
     MaterialModule,
+    CommonModule,
     AuthRoutingModule
   ]
 })
