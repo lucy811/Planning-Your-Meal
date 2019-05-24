@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "xi18n": "ng xi18n",
+    "serve_cn": "ng serve --configuration=cn",
+    "build_cn": "ng build --configuration=cn"
   },
   "private": true,
   "dependencies": {

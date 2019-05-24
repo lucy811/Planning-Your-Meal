@@ -56,6 +56,14 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "cn": {
+              "aot": true,
+              "outputPath": "dist/Planning-Your-Meal-Reservation",
+              "i18nFile": "src/locale/messages.cn.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "zh-Hans",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -67,6 +75,9 @@
           "configurations": {
             "production": {
               "browserTarget": "Planning-Your-Meal-Reservation:build:production"
+            },
+            "cn": {
+              "browserTarget": "Planning-Your-Meal-Reservation:build:cn"
             }
           }
         },
