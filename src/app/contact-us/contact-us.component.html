@@ -1,10 +1,10 @@
 <form class="contact-us" (ngSubmit)="onSubmit(f)" #f="ngForm">
   <div>
-    <button mat-fab color="primary" type="submit">Save</button>
-    <button mat-fab color="warn" type="button" (click)="onFetch()">Fetch</button>
-    <button mat-fab color="accent" type="button"(click)="onCancel()">Cancel</button>
+    <button mat-fab color="primary" type="submit" i18n>Save</button>
+    <button mat-fab color="warn" type="button" (click)="onFetch()" i18n>Fetch</button>
+    <button mat-fab color="accent" type="button"(click)="onCancel()" i18n>Cancel</button>
   </div>
   <div class="textarea-style">
-      <textarea type="text" name="contact" rows="20" cols="50" placeholder="Reservation time or personal taste preference and so on" [ngModel]="contactInfo" required></textarea>
+      <textarea type="text" name="contact" rows="20" cols="50" placeholder="Reservation time or personal taste preference and so on" [ngModel]="contactInfo" required i18n-placeholder></textarea>
   </div>
 </form>

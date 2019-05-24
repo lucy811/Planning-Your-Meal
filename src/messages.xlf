@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="d4522bd124dab675ef61386b01e475f723e95da5" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Meal Plan<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aac1623956e43a53f7bcb172ba05f4c65d391050" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Dishes<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4d57915cd3167c07bd9957f276535f30954450d5" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Preparation List<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="83a7dbd74079d27bcb311af4d2498a038f59e555" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Contact Us<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="68949525c4d9a901e0cd15a94e3fc8d2711e9918" datatype="html">
+        <source>Manage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="098d8123367828ee6931820c2ecdbd081997b562" datatype="html">
+        <source>Fetch Data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="67da3d40769d8adc9af66afac221b9daf7e42905" datatype="html">
+        <source>Save Data</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cfc2f436ec2beffb042e7511a73c89c372e86a6c" datatype="html">
+        <source>Register</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/header/header.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="32956953e1de1e22587384ffb10d48ab8fedffb4" datatype="html">
+        <source>Welcome to the Meal Plan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/core/home/home.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="82bbcd2676a6abf85bbcbcd4037d6758b4f7bdec" datatype="html">
+        <source>
+        <x id="INTERPOLATION" equiv-text="{{ ingredient.name }}"/> (<x id="INTERPOLATION_1" equiv-text="{{ ingredient.weight }}"/>)
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/preparation-list/preparation-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-edit/dish-edit.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7acc1067e44216b0183901289cfc2bd1dedec2a5" datatype="html">
+        <source>Fetch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-edit/dish-edit.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ff6185c88c42878c5c1b899e154f5348dd4b5558" datatype="html">
+        <source>Reservation time or personal taste preference and so on</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/preparation-list/preparation-edit/preparation-edit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-edit/dish-edit.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="919f2fd60a898850c24b1584362bbf18a4628bcb" datatype="html">
+        <source>Weight</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/preparation-list/preparation-edit/preparation-edit.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fa9eaf5e5b75be2f2786d32af9740b6f0093784a" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ editMode? &apos;Update&apos; : &apos;Add&apos; }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/preparation-list/preparation-edit/preparation-edit.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/preparation-list/preparation-edit/preparation-edit.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="99ee4faa69cd2ea8e3678c1f557c0ff1f05aae46" datatype="html">
+        <source>Clear</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/preparation-list/preparation-edit/preparation-edit.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f33f14958f5494de575c492db2a381ba71656e6c" datatype="html">
+        <source>Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9fcbe00f0c1972ab62c4df6ad6ca6cdf46dddb66" datatype="html">
+        <source>
+        The email is required
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="90af0b641fec6fc4f3682b75996338072de04131" datatype="html">
+        <source>
+      The email must be correct format
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c5ade6aed4f6dbe8e1a28318f7a739af199bb894" datatype="html">
+        <source>
+      Password is required
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="296afe8332b2369421eead86f9c8171ce277ba59" datatype="html">
+        <source>
+      Password must be at least 6 characters long
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28629af803ab8b5f6e995b17d486e6a1527e2a96" datatype="html">
+        <source>Sign Up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signup/signup.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="10624fce3ba5b4ca190462bbf6821933d9d18f4c" datatype="html">
+        <source>
+        The email is required
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0a4ec0bab2c103c04dde36f08700dfad0ce10706" datatype="html">
+        <source>
+        The email must be correct format
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d372bd6223a7e90c4d354263ad7b62135ba46ebf" datatype="html">
+        <source>
+        Password is required
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eb463970a28bf71fb95efb52d1ed00f873e337aa" datatype="html">
+        <source>
+        Password must be at least 6 characters long
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ba4f24bf9bf3dc4db3d6bc1b8b63339295f0b806" datatype="html">
+        <source>Sign In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/auth/signin/signin.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7373c04fd7c86cc32408d4957e5e3b7219d87ee1" datatype="html">
+        <source>Please select a Dish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-start/dish-start.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b02f2d1d62cc7047afe698d01e44931a1ccb3341" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ dish.name }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-detail/dish-detail.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-list/dish-item/dish-item.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c8f1ea7b94d9f3fb2edd22fb44e55ce696dc3e89" datatype="html">
+        <source>Manage Dish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-detail/dish-detail.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dfbe6e3cc6deb092d1b6b08d729cc553f36622af" datatype="html">
+        <source>To Preparation List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-detail/dish-detail.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bb84fa83c719886c83dc1a7b03f477b29f40ab5c" datatype="html">
+        <source>Edit Dish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-detail/dish-detail.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3006e416d9bf4812db45b32e5c91b566d008571f" datatype="html">
+        <source>Delete Dish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-detail/dish-detail.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf0e81a31f4421217f7b3601d8171a466e5334c7" datatype="html">
+        <source>
+        <x id="INTERPOLATION" equiv-text="{{ ingredient.name }}"/> - <x id="INTERPOLATION_1" equiv-text="{{ ingredient.weight }}"/>
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-detail/dish-detail.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3e9b30fd354be88f8a1335234140210aab2fd0db" datatype="html">
+        <source>Image URL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-edit/dish-edit.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-edit/dish-edit.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3959feb0114fde7a8f74dc52ae41cc124e3be753" datatype="html">
+        <source>Add Ingredient</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-edit/dish-edit.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d5bd4435daeb4452b81a6c3f3f777187855bd2ed" datatype="html">
+        <source>New Dish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-list/dish-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5f80f607397752ce81fafe3daedb03c1fc617268" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ dish.description }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dishes/dish-list/dish-item/dish-item.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

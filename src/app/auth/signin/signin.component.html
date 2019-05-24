@@ -1,31 +1,31 @@
 <form (ngSubmit)="onSignin(f)" #f="ngForm" class="sign-form">
     <div>
-      <label for="email">Mail</label>
+      <label for="email" i18n>Mail</label>
     </div>
     <input type="email" name="email" class="form-control" #email="ngModel" ngModel email required>
     <div style="color:red" 
       *ngIf="email.errors && (email.dirty || email.touched || f.submitted)">
-      <p *ngIf="email.errors.required">
+      <p *ngIf="email.errors.required" i18n>
         The email is required
       </p>
-      <p *ngIf="email.errors.email">
+      <p *ngIf="email.errors.email" i18n>
         The email must be correct format
       </p>
     </div>
     <div>
-      <label for="password">Password</label>
+      <label for="password" i18n>Password</label>
     </div>
     <input type="password" name="password" #password ="ngModel" ngModel minlength="6" required>
     <div style="color:red" 
       *ngIf="password.errors && (password.dirty || password.touched || f.submitted)">
-      <p *ngIf="password.errors.required">
+      <p *ngIf="password.errors.required" i18n>
         Password is required
       </p>
-      <p *ngIf="password.errors.minlength">
+      <p *ngIf="password.errors.minlength" i18n>
         Password must be at least 6 characters long
       </p>
     </div>
     <div class="sign-button">
-      <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">Sign In</button>
+      <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid" i18n>Sign In</button>
     </div>
   </form>
