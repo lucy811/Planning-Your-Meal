@@ -10,6 +10,7 @@ import { DishService } from '../dishes/dish.service';
 import { DataStorageService } from '../shared/data-storage.service';
 import { ContactUsService } from '../contact-us/contact-us.service';
 import { AuthService } from '../../app/auth/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthService } from '../../app/auth/auth.service';
   imports: [
     MaterialModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   exports: [
     AppRoutingModule,

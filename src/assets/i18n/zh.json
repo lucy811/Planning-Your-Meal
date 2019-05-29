@@ -1,0 +1,21 @@
+{
+  "Welcome to the Meal Plan": "欢迎来到膳食计划",
+  "Meal Plan": "膳食计划",
+  "Dishes": "菜肴",
+  "Preparation List": "准备列表",
+  "Contact Us": "联系我们",
+  "EN": "英文",
+  "ZH": "中文",
+  "Manage": "管理",
+  "Fetch Data": "获取数据",
+  "Save Data": "存储数据",
+  "Logout": "退出",
+  "Register": "注册",
+  "Login": "登录",
+  "Manage Dish" : "管理菜肴",
+  "To Preparation List": "到准备清单",
+  "Edit Dish" : "编辑菜肴",
+  "Delete Dish": "删除菜肴",
+  "Save": "保存",
+  "Cancel": "取消"
+}
