@@ -17,5 +17,19 @@
   "Edit Dish" : "编辑菜肴",
   "Delete Dish": "删除菜肴",
   "Save": "保存",
-  "Cancel": "取消"
+  "Cancel": "取消",
+  "Mail": "邮件",
+  "The email is required": "电子邮件是必需的",
+  "The email must be correct format": "邮件必须有正确的形式",
+  "Password": "密码",
+  "Password is required": "密码是必须的",
+  "Password must be at least 6 characters long": "密码至少有6位数长",
+  "Sign In": "登录",
+  "Sign Up": "注册",
+  "Fetch": "获取数据",
+  "Reservation time or personal taste preference and so on": "订餐时间或者各人口味偏好等等",
+  "Image URL": "图片链接",
+  "Dish Name": "菜肴名字",
+  "Description": "菜肴描述",
+  "Add Ingredient": "添加原料"
 }

@@ -17,5 +17,19 @@
   "Edit Dish" : "Edit Dish",
   "Delete Dish": "Delete Dish",
   "Save": "Save",
-  "Cancel": "Cancel"
+  "Cancel": "Cancel",
+  "Mail": "Mail",
+  "The email is required": "The email is required",
+  "The email must be correct format": "The email must be correct format",
+  "Password": "Password",
+  "Password is required": "Password is required",
+  "Password must be at least 6 characters long": "Password must be at least 6 characters long",
+  "Sign In": "Sign In",
+  "Sign Up": "Sign Up",
+  "Fetch": "Fetch",
+  "Reservation time or personal taste preference and so on": "Reservation time or personal taste preference and so on",
+  "Image URL": "Image URL",
+  "Dish Name": "Dish Name",
+  "Description": "Description",
+  "Add Ingredient": "Add Ingredient"
 }

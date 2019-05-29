@@ -1,31 +1,31 @@
 <form (ngSubmit)="onSignup(f)" #f="ngForm" class="sign-form">
   <div>
-    <label for="email">Mail</label>
+    <label for="email">{{ 'Mail' | translate }}</label>
   </div>
   <input type="email" name="email" #email="ngModel" ngModel email required>
   <div style="color:red" 
     *ngIf="email.errors && (email.dirty || email.touched || f.submitted)">
     <p *ngIf="email.errors.required">
-        The email is required
+      {{ 'The email is required' | translate }}
     </p>
     <p *ngIf="email.errors.email">
-      The email must be correct format
+      {{ 'The email must be correct format' | translate }}
     </p>
   </div>
   <div>
-    <label for="password">Password</label>
+    <label for="password">{{ 'Password' | translate }}</label>
   </div>
   <input type="password" name="password" #password ="ngModel" ngModel minlength="6" required>
   <div style="color:red" 
     *ngIf="password.errors && (password.dirty || password.touched || f.submitted)">
     <p *ngIf="password.errors.required">
-      Password is required
+      {{ 'Password is required' | translate }}
     </p>
     <p *ngIf="password.errors.minlength">
-      Password must be at least 6 characters long
+      {{ 'Password must be at least 6 characters long' | translate }}
     </p>
   </div>
   <div class="sign-button">
-    <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">Sign Up</button>
+    <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">{{ 'Sign Up' | translate }}</button>
   </div>
 </form>
