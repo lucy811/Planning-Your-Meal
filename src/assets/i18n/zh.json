@@ -36,8 +36,8 @@
   "Please select a Dish": "请选择一盘菜",
   "Name": "原料名",
   "Weight": "重量",
-  "Update": "更新",
-  "Add": "添加",
   "Delete": "删除",
-  "Clear": "清除"
+  "Clear": "清除",
+  "Update": "更新", 
+  "Add" : "添加"
 }
