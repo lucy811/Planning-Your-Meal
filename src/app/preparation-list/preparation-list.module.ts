@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { PreparationListComponent } from './preparation-list.component';
 import { PreparationEditComponent } from './preparation-edit/preparation-edit.component';
 import { MaterialModule } from '../shared/material.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MaterialModule } from '../shared/material.module';
   imports: [
     CommonModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    TranslateModule
   ]
 })
 export class PreparationListModule { }

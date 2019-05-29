@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../shared/material.module';
 import { ContactUsComponent } from './contact-us.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { ContactUsComponent } from './contact-us.component';
         CommonModule,
         FormsModule,
         MaterialModule,
+        TranslateModule
     ],
 })
 

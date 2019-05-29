@@ -10,6 +10,7 @@ import { DishEditComponent } from './dish-edit/dish-edit.component';
 import { DishesRoutingModule } from './dishes-routing.module';
 import { MaterialModule } from '../shared/material.module';
 import { BetterHighlightDirective } from '../shared/better-highlight.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BetterHighlightDirective } from '../shared/better-highlight.directive';
     MaterialModule,
     CommonModule,
     ReactiveFormsModule,
-    DishesRoutingModule
+    DishesRoutingModule,
+    TranslateModule
   ]
 })
 

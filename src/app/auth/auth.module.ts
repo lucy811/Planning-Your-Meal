@@ -6,6 +6,7 @@ import { SigninComponent } from '../auth/signin/signin.component';
 import { AuthRoutingModule } from '../auth/auth-routing.module';
 import { MaterialModule } from '../shared/material.module';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     MaterialModule,
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    TranslateModule
   ]
 })
 export class AuthModule { }
