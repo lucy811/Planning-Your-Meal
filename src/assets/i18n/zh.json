@@ -31,5 +31,13 @@
   "Image URL": "图片链接",
   "Dish Name": "菜肴名字",
   "Description": "菜肴描述",
-  "Add Ingredient": "添加原料"
+  "Add Ingredient": "添加原料",
+  "New Dish": "新菜名",
+  "Please select a Dish": "请选择一盘菜",
+  "Name": "原料名",
+  "Weight": "重量",
+  "Update": "更新",
+  "Add": "添加",
+  "Delete": "删除",
+  "Clear": "清除"
 }

@@ -1,9 +1,9 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-  <label for="name">Name</label><input type="text" class="input" name="name" ngModel required>
-  <label for="weight">Weight</label><input type="number" name="weight" ngModel required pattern="^[1-9]+[0-9]*$">
+  <label for="name">{{ 'Name' | translate }}</label><input type="text" class="input" name="name" ngModel required>
+  <label for="weight">{{ 'Weight' | translate }}</label><input type="number" name="weight" ngModel required pattern="^[1-9]+[0-9]*$">
   <div id="preparation-button">
-    <button mat-fab color="warn" [disabled]="!f.valid">{{ editMode? 'Update' : 'Add' }}</button>
-    <button mat-fab id="delete-button" *ngIf="editMode" (click)="onDelete()">Delete</button>
-    <button mat-fab color="accent" id="clear-button" type="button" (click)="onClear()">Clear</button>
+    <button mat-fab color="warn" [disabled]="!f.valid">{{ editMode? '{{ 'Update' | translate }}' : '{{ 'Add' | translate }}' }}</button>
+    <button mat-fab id="delete-button" *ngIf="editMode" (click)="onDelete()">{{ 'Delete' | translate }}</button>
+    <button mat-fab color="accent" id="clear-button" type="button" (click)="onClear()">{{ 'Clear' | translate }}</button>
   </div>
 </form>

@@ -31,5 +31,13 @@
   "Image URL": "Image URL",
   "Dish Name": "Dish Name",
   "Description": "Description",
-  "Add Ingredient": "Add Ingredient"
+  "Add Ingredient": "Add Ingredient",
+  "New Dish": "New Dish",
+  "Please select a Dish": "Please select a Dish",
+  "Name": "Name",
+  "Weight": "Weight",
+  "Update": "Update",
+  "Add": "Add",
+  "Delete": "Delete",
+  "Clear": "Clear"
 }
