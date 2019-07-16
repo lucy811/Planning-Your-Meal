@@ -19,7 +19,7 @@
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
   color: white;
 }
 
@@ -39,27 +39,23 @@ a {
   padding-left: 5%;
 }
 
-.language-menu {
+.language {
   padding-left: 5%;
-}
-
-.language-zh {
   font-family: 'Times New Roman';
   font-size: 20px;
-  cursor: pointer;
-}
 
-.language-en {
-  font-family: 'Times New Roman';
-  font-size: 20px;
-  cursor: pointer;
-}
+  &-zh {
+    cursor: pointer;
+  }
 
-.language-en:after {
-  font-family: 'Times New Roman';
-  font-size: 20px;
-  padding: 10px;
-  content: "|";
-  display: inline-block;
-  cursor: pointer;
+  &-en {
+    cursor: pointer;
+
+    &:after {
+      padding: 10px;
+      content: "|";
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
 }

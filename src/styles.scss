@@ -1,11 +1,24 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+.sign-form  {
+  margin-top: 30px;
+}
+
+.sign-button-style {
+  margin-top: 10px;
+}
+
+.sign-button:hover {
+  transform: scale(1.1) translateY(-.1rem);
+  z-index: 20;
+}
+
 .form-group {
   margin: 20px;
 }
 
 .input-control {
-  height:20px;
+  height: 20px;
   width: 40%;
   border-style: groove;
 }
@@ -28,4 +41,13 @@ div#background > img {
   width:100%;
   border:0;
   opacity: 0.3;
+}
+
+.contact-us {
+  margin: 15px;
+  text-align: center;
+}
+
+.textarea-style {
+  padding: 15px; 
 }

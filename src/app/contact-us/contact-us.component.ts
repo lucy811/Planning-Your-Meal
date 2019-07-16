@@ -9,8 +9,7 @@ import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-date',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css'],
+  templateUrl: './contact-us.component.html'
 })
 
 export class ContactUsComponent implements OnInit {
