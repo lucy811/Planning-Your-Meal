@@ -1,5 +1,12 @@
 <div class="dish-detail">
-  <img id="dish-image" [src]="dish.imagePath" alt="{{ dish.name }}">
+  <div class="image">
+    <img class="image-front" [src]="dish.imagePath" alt="{{ dish.name }}">
+    <div class="image-back">
+      <p class="price-only">Only</p>
+      <p class="price-value">$9</p>
+      <p class="book">Book me!</p>
+    </div>
+  </div>
   <h1>{{ dish.name }}</h1>
   <button mat-button [matMenuTriggerFor]="menu" id="manage-dish">{{ 'Manage Dish' | translate }}</button>
   <mat-menu #menu="matMenu">

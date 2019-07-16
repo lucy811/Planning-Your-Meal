@@ -5,3 +5,8 @@
 .sign-button {
   margin-top: 10px;
 }
+
+button:hover {
+  transform: scale(1.1) translateY(-.1rem);
+  z-index: 20;
+}

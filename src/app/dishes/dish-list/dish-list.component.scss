@@ -3,5 +3,16 @@
   font-size: 18px;
   color:white;
   margin-top: 10px;
+  border-radius: 100px;
+}
+
+.col-new-dish:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.col-new-dish:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
