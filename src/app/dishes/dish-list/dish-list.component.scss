@@ -1,18 +1,18 @@
 .col-new-dish {
   font-family: 'Times New Roman'; 
-  font-size: 18px;
+  font-size: 1.125rem;
   color:white;
-  margin-top: 10px;
-  border-radius: 100px;
+  margin-top: 0.625rem;
+  border-radius: 6.25rem;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    transform: translateY(-0.19rem);
+    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,.2);
   }
 
   &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    transform: translateY(-0.053rem);
+    box-shadow: 0 0.3125rem 625rem rgba(0,0,0,.2);
   }
 }
 
