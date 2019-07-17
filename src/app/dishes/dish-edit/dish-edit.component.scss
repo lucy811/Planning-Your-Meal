@@ -1,7 +1,15 @@
-.dish-edit-form {
+.dish-edit {
   top: 130px;
   margin-left: 40%;
   position: absolute;
+
+  &-row {
+    padding: 1%; 
+
+    &-name {
+      padding: 1px;
+    }
+  }
 }
 
 .img-responsive {
@@ -20,17 +28,11 @@
  width: 385px;  
 }
 
-.dish-edit-row {
-  padding: 1%; 
-}
+
 
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
 border: 1px solid red;
-}
-
-.form-row-name {
-  padding: 1px;
 }
 
 .form-control {

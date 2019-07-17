@@ -6,44 +6,40 @@
 
 .image {
   perspective: 1000;
-}
+  transition: 2s;
+  transform-style: preserve-3d;
+  position: relative;
+  
+  &:hover {
+    transform: rotateY(180deg);
+  }
 
-.image:hover {
-  transform: rotateY(180deg);
+  &-front {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+
+  &-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background-image: linear-gradient(to right bottom,  #e7edf5, #9c0f05);
+    text-align: center;
+    color: white;
+    margin-bottom: 8rem;
+  }
 }
 
 .image, .image-front, .image-back {
   margin-top: 16px;
   width: 390px;
   height: 320px;
-}
-
-.image {
-  transition: 2s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-.image-front, .image-back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.image-front {
-  z-index: 2;
-  transform: rotateY(0deg);
-}
-
-.image-back {
-  transform: rotateY(180deg);
-  background-image: linear-gradient(to right bottom,  #e7edf5, #9c0f05);
-  text-align: center;
-  color: white;
-  margin-bottom: 8rem;
 }
 
 .price-only {
@@ -61,16 +57,16 @@
   font-weight: 100;
 }
 
-#manage-dish {
+.manage {
   background-color:rgba(43, 59, 145, 0.32);
   color:black;
   height: 50px;
   width: 140px;
-}
 
-.manage {
-  font-family: 'Times New Roman';
-  font-size: 16px; 
+  &-dish {
+    font-family: 'Times New Roman';
+    font-size: 16px; 
+  }
 }
 
 #items-list-item {
