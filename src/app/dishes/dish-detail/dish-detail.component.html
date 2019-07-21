@@ -8,11 +8,11 @@
     </div>
   </div>
   <h1>{{ dish.name }}</h1>
-  <button mat-button [matMenuTriggerFor]="menu" id="manage-dish">{{ 'Manage Dish' | translate }}</button>
+  <button mat-button [matMenuTriggerFor]="menu" class="manage">{{ 'Manage Dish' | translate }}</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item id="manage" (click)="addIngredientsToList()">{{ 'To Preparation List' | translate }}</button>
-    <button mat-menu-item id="manage" (click)="onEditDish()">{{ 'Edit Dish' | translate }}</button>
-    <button mat-menu-item id="manage" (click)="onDeleteDish()">{{ 'Delete Dish' | translate }}</button>
+    <button mat-menu-item id="manage-dish" (click)="addIngredientsToList()">{{ 'To Preparation List' | translate }}</button>
+    <button mat-menu-item id="manage-dish" (click)="onEditDish()">{{ 'Edit Dish' | translate }}</button>
+    <button mat-menu-item id="manage-dish" (click)="onDeleteDish()">{{ 'Delete Dish' | translate }}</button>
   </mat-menu>
   <div>
     <mat-list>

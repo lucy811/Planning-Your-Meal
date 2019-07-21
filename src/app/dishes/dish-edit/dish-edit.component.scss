@@ -1,36 +1,38 @@
-.dish-edit-form {
-  top: 130px;
+.dish-edit {
+  top: 8.125rem;
   margin-left: 40%;
   position: absolute;
-}
 
-.img-responsive {
-  width: 390px;
-  height: 320px;
+  &-row {
+    padding: 1%; 
+
+    &-name {
+      padding: 1px;
+    }
+
+    &-img-responsive {
+      width: 24.37em;
+      height: 20em;
+    }
+  }
 }
 
 #input {
- height: 25px;
- width: 385px;
- border-style: groove;
+  height: 1.56rem;
+  width: 24rem;
+  border-style: groove;
 }
 
 #description {
- height: 55px;
- width: 385px;  
+ height: 3.43rem;
+ width: 24rem;  
 }
 
-.dish-edit-row {
-  padding: 1%; 
-}
+
 
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
-border: 1px solid red;
-}
-
-.form-row-name {
-  padding: 1px;
+  border: 0.0625rem solid red;
 }
 
 .form-control {

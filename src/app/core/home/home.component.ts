@@ -4,7 +4,6 @@ import { trigger, style, transition, animate, keyframes } from '@angular/animati
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
   animations: [
     trigger('home', [
       transition('void => *', [

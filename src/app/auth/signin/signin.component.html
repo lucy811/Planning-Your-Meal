@@ -25,7 +25,7 @@
         {{ 'Password must be at least 6 characters long' | translate }}
       </p>
     </div>
-    <div class="sign-button">
-      <button  mat-flat-button color="accent" type="submit" [disabled]="!f.valid">{{ 'Sign In' | translate }}</button>
+    <div class="sign-button-style">
+      <button  mat-flat-button color="accent" class="sign-button" type="submit" [disabled]="!f.valid">{{ 'Sign In' | translate }}</button>
     </div>
   </form>

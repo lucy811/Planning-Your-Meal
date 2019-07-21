@@ -1,24 +1,24 @@
-<form class="dish-edit-form" [formGroup]="dishForm" (ngSubmit)="onSubmit()">
+<form class="dish-edit" [formGroup]="dishForm" (ngSubmit)="onSubmit()">
   <div class="dish-edit-row">
     <button mat-fab color="primary" type="submit" [disabled]="!dishForm.valid">{{ 'Save' | translate }}</button>
     <button mat-fab color="accent" (click)="onCancel()">{{ 'Cancel' | translate }}</button>
   </div>
   <div class="dish-edit-row">
-    <div class="form-row-name">
+    <div class="dish-edit-row-name">
       <label for="imagePath">{{ 'Image URL' | translate }}</label>
     </div>
     <div>
       <div *ngIf="imagePath.value !=='' else noImage">
-        <img [src]="imagePath.value" class="img-responsive">
+        <img [src]="imagePath.value" class="dish-edit-row-img-responsive">
       </div>
       <ng-template #noImage>
-        <img src="../../../assets/image.jpg" class="img-responsive">
+        <img src="../../../assets/image.jpg" class="dish-edit-row-name-img-responsive">
       </ng-template>
     </div>
     <input matInput type="text" id="input" formControlName="imagePath" class="form-control" #imagePath>
   </div>
   <div class="dish-edit-row">
-    <div class="form-row-name">
+    <div class="dish-edit-row-name">
       <div>
         <label for="dishName">{{ 'Dish Name' | translate }}</label>
       </div>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="dish-edit-row">
-    <div class="form-row-name">
+    <div class="dish-edit-row-name">
       <label for="dishDescription">{{ 'Description' | translate }}</label>
     </div>
     <div>
