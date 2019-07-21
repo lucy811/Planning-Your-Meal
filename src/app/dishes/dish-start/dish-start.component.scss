@@ -1,6 +1,12 @@
+@import '../../../mixin';
+
 .dish-start {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
+
+  @include respond(tablet) {
+    font-size: 0.9rem;
+  }
 }
 
 @keyframes moveInBottom {

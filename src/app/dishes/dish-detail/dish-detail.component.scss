@@ -1,3 +1,5 @@
+@import '../../../mixin';
+
 .dish-detail {
   top:  6.25rem;
   margin-left: 40%;
@@ -40,21 +42,38 @@
   margin-top: 1rem;
   width: 24.375rem;
   height: 20rem;
+
+  @include respond(tablet) {
+    width: 20rem;
+    height: 16rem;
+  }
 }
 
 .price-only {
   font-size: 1.6rem;
   text-transform: uppercase;
+
+  @include respond(tablet) {
+    font-size: 1.4rem;
+  }
 }
 
 .price-value {
   font-size: 2rem;
   font-weight: 100;
+
+  @include respond(tablet) {
+    font-size: 1.8rem;
+  }
 }
 
 .book {
   font-size: 1.8rem;
   font-weight: 100;
+
+  @include respond(tablet) {
+    font-size: 1.6rem;
+  }
 }
 
 .manage {
@@ -68,6 +87,10 @@
   &-dish {
     font-size: 1rem; 
   }
+
+  @include respond(tablet) {
+    font-size: 1rem;
+  }
 }
 
 #items-list-item {
@@ -79,7 +102,13 @@
   width: 10rem;
 }
 
-h1:hover {
-  transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: .5rem 1rem 2rem rgba(black, .3);
+h1 {
+  @include respond(tablet) {
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(black, .3);
+  }
 }
