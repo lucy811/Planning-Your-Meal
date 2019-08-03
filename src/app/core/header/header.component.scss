@@ -1,6 +1,12 @@
+@import '../../../mixin';
+
 @mixin font-style {
   font-family: 'Times New Roman';
   font-size: 1.25rem;
+
+  @include respond(tablet) {
+    font-size: 0.9rem;
+  }
 }
 
 .mean-plan {
@@ -14,10 +20,26 @@
 
 .menu {
   padding: 12.5rem;
+
+  @include respond(desktop) {
+    padding-left: 3.5rem;
+  }
+
+  @include respond(tablet-pro) {
+    padding-left: 0;
+  }
 }
 
 .manage {
   @include font-style;
+
+  @include respond(tablet-pro) {
+    padding-left: 1rem;
+  }
+
+  @include respond(tablet) {
+    padding-left: 1rem;
+  }
 }
 
 a {
@@ -27,11 +49,41 @@ a {
 
 .manage-button {
   padding-left: 12.5rem;
+
+
+  @include respond(desktop) {
+    padding-left: 3.5rem;
+  }
+
+  @include respond(tablet-pro) {
+    padding-left: 0;
+  }
 }
 
 .register {
   @include font-style;
   padding: 3.13rem;
+
+  @include respond(tablet-pro) {
+    padding-left: 1rem;
+  }
+
+  @include respond(tablet) {
+    padding-left: 1rem;
+  }
+}
+
+.login {
+  @include font-style;
+  padding: 3.13rem;
+
+  @include respond(desktop) {
+    padding: 0;
+  }
+
+  @include respond(tablet-pro) {
+    padding-left: 0.13rem;
+  }
 }
 
 .navigation {
@@ -42,6 +94,10 @@ a {
 .language {
   padding-left: 5%;
   @include font-style;
+
+  @include respond(tablet) {
+    padding-left: 1rem;
+  }
 
   &-zh {
     cursor: pointer;

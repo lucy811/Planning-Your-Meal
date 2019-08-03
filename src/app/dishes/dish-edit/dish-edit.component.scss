@@ -1,3 +1,5 @@
+@import '../../../mixin';
+
 .dish-edit {
   top: 8.125rem;
   margin-left: 40%;
@@ -13,6 +15,11 @@
     &-img-responsive {
       width: 24.37em;
       height: 20em;
+
+      @include respond(tablet) {
+        width: 20rem;
+        height: 16rem;
+      }
     }
   }
 }
@@ -21,11 +28,19 @@
   height: 1.56rem;
   width: 24rem;
   border-style: groove;
+
+  @include respond(tablet) {
+    width: 20rem;
+  }
 }
 
 #description {
  height: 3.43rem;
  width: 24rem;  
+
+ @include respond(tablet) {
+  width: 20rem;
+ }
 }
 
 
