@@ -16,7 +16,7 @@
       width: 24.37em;
       height: 20em;
 
-      @include respond(tablet) {
+      @include respond(small) {
         width: 20rem;
         height: 16rem;
       }
@@ -29,7 +29,7 @@
   width: 24rem;
   border-style: groove;
 
-  @include respond(tablet) {
+  @include respond(small) {
     width: 20rem;
   }
 }
@@ -38,7 +38,7 @@
  height: 3.43rem;
  width: 24rem;  
 
- @include respond(tablet) {
+ @include respond(small) {
   width: 20rem;
  }
 }

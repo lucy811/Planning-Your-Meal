@@ -4,7 +4,7 @@
   font-family: 'Times New Roman';
   font-size: 1.25rem;
 
-  @include respond(tablet) {
+  @include respond(small) {
     font-size: 0.9rem;
   }
 }
@@ -18,26 +18,14 @@
   @include font-style;
 }
 
-.menu {
-  padding: 12.5rem;
-
-  @include respond(desktop) {
-    padding-left: 3.5rem;
-  }
-
-  @include respond(tablet-pro) {
-    padding-left: 0;
-  }
-}
-
 .manage {
   @include font-style;
 
-  @include respond(tablet-pro) {
+  @include respond(medium) {
     padding-left: 1rem;
   }
 
-  @include respond(tablet) {
+  @include respond(small) {
     padding-left: 1rem;
   }
 }
@@ -51,11 +39,11 @@ a {
   padding-left: 12.5rem;
 
 
-  @include respond(desktop) {
+  @include respond(large) {
     padding-left: 3.5rem;
   }
 
-  @include respond(tablet-pro) {
+  @include respond(medium) {
     padding-left: 0;
   }
 }
@@ -64,11 +52,11 @@ a {
   @include font-style;
   padding: 3.13rem;
 
-  @include respond(tablet-pro) {
+  @include respond(medium) {
     padding-left: 1rem;
   }
 
-  @include respond(tablet) {
+  @include respond(small) {
     padding-left: 1rem;
   }
 }
@@ -77,11 +65,11 @@ a {
   @include font-style;
   padding: 3.13rem;
 
-  @include respond(desktop) {
+  @include respond(large) {
     padding: 0;
   }
 
-  @include respond(tablet-pro) {
+  @include respond(medium) {
     padding-left: 0.13rem;
   }
 }
@@ -95,7 +83,7 @@ a {
   padding-left: 5%;
   @include font-style;
 
-  @include respond(tablet) {
+  @include respond(small) {
     padding-left: 1rem;
   }
 
@@ -107,10 +95,20 @@ a {
     cursor: pointer;
 
     &:after {
-      padding: 0.625rem;
+      padding: 0.63rem;
       content: "|";
       display: inline-block;
       cursor: pointer;
     }
+  }
+}
+
+mat-toolbar {
+  display:flex;
+
+  @include respond(medium) {
+    flex-wrap: wrap;
+    height: 90px;
+    width: 100%;
   }
 }

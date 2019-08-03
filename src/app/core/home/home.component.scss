@@ -1,0 +1,8 @@
+@import '../../../mixin';
+
+h2 {
+  @include respond(small) {
+    font-family: 'Times New Roman';
+    font-size: 1.1rem;
+  }
+}
