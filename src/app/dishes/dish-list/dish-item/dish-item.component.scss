@@ -6,7 +6,8 @@
   padding-right: 0.94rem;
 
   @include respond(small) {
-    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -14,6 +15,10 @@
   font-family: 'Times New Roman'; 
   font-size: 0.875rem;
   padding-right: 0.94rem;
+
+  @include respond(small) {
+    font-size: 0;
+  }
 }
 
 mat-grid-tile {
