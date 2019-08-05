@@ -7,7 +7,16 @@
 
   @include respond(small) {
     margin-left: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+img {
+  max-height: 50px;
+
+  @include respond(small) {
+    width: 0;
+    height: 0;
   }
 }
 
