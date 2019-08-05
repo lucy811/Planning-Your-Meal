@@ -9,7 +9,7 @@
     <span (click)="switchLanguage('zh')" class="language-zh">{{ 'ZH' | translate }}</span>
   </span>
 
-  <span class="menu" *ngIf="isAuthenticated()">
+  <span class="manage-button" *ngIf="isAuthenticated()">
     <button mat-button [matMenuTriggerFor]="manage" class="manage">{{ 'Manage' | translate }}</button>
     <mat-menu #manage="matMenu">
       <button mat-menu-item class="manage" (click)="onFetchData()">{{ 'Fetch Data' | translate }}</button>

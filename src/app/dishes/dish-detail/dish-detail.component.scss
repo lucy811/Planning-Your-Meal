@@ -40,12 +40,25 @@
 
 .image, .image-front, .image-back {
   margin-top: 1rem;
-  width: 24.375rem;
+  width: 24.5rem;
   height: 20rem;
 
-  @include respond(tablet) {
+  @include respond(medium) {
+    margin-top: 1.8rem;
     width: 20rem;
     height: 16rem;
+  }
+
+  @include respond(small) {
+    margin-top: 2rem;
+    width: 17.5rem;
+    height: 14rem;
+  }
+
+  @include respond(smallest) {
+    margin-top: 2rem;
+    width: 7.5rem;
+    height: 6rem;
   }
 }
 
@@ -53,7 +66,7 @@
   font-size: 1.6rem;
   text-transform: uppercase;
 
-  @include respond(tablet) {
+  @include respond(small) {
     font-size: 1.4rem;
   }
 }
@@ -62,7 +75,7 @@
   font-size: 2rem;
   font-weight: 100;
 
-  @include respond(tablet) {
+  @include respond(small) {
     font-size: 1.8rem;
   }
 }
@@ -71,7 +84,7 @@
   font-size: 1.8rem;
   font-weight: 100;
 
-  @include respond(tablet) {
+  @include respond(small) {
     font-size: 1.6rem;
   }
 }
@@ -88,7 +101,7 @@
     font-size: 1rem; 
   }
 
-  @include respond(tablet) {
+  @include respond(small) {
     font-size: 1rem;
   }
 }
@@ -103,8 +116,14 @@
 }
 
 h1 {
-  @include respond(tablet) {
+  @include respond(medium) {
+    margin-top: 2rem;
     font-size: 1.8rem;
+  }
+
+  @include respond(small) {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
   }
 
   &:hover {

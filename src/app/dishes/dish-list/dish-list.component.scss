@@ -17,7 +17,7 @@
     box-shadow: 0 0.3125rem 625rem rgba(0,0,0,.2);
   }
 
-  @include respond(tablet) {
+  @include respond(small) {
     font-size: 0.9rem;
   }
 }
