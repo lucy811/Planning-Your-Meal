@@ -13,7 +13,7 @@ import { DataStorageService } from '../shared/data-storage.service';
 })
 
 export class ContactUsComponent implements OnInit {
-  @ViewChild('f') contactForm: NgForm;
+  @ViewChild('f', {static: false}) contactForm: NgForm;
   subscription: Subscription;
   contactInfo: string;
 

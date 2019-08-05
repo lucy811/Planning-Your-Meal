@@ -14,7 +14,7 @@ export class PreparationEditComponent implements OnInit, OnDestroy {
   editNumber: number;
   editMode = false;
   editedItem: Ingredient;
-  @ViewChild('f') plForm: NgForm;
+  @ViewChild('f', {static: false}) plForm: NgForm;
 
   constructor(private plService: PreparationListService) { }
 
