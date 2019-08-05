@@ -50,7 +50,7 @@ a {
 
 .register {
   @include font-style;
-  padding: 3.13rem;
+  padding: 2.13rem;
 
   @include respond(medium) {
     padding-left: 1rem;

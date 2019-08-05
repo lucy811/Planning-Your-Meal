@@ -43,6 +43,12 @@
   width: 24.5rem;
   height: 20rem;
 
+  @include respond(medium) {
+    margin-top: 1.8rem;
+    width: 20rem;
+    height: 16rem;
+  }
+
   @include respond(small) {
     margin-top: 2rem;
     width: 17.5rem;
@@ -110,6 +116,11 @@
 }
 
 h1 {
+  @include respond(medium) {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+
   @include respond(small) {
     margin-top: 2.5rem;
     font-size: 1.5rem;
