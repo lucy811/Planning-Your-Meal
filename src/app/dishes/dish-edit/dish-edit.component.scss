@@ -8,6 +8,10 @@
   &-row {
     padding: 1%; 
 
+    @include respond(medium) {
+      margin-top: 1.5rem;
+    }
+
     &-name {
       padding: 1px;
     }
@@ -16,11 +20,31 @@
       width: 24.37em;
       height: 20em;
 
-      @include respond(small) {
+      @include respond(medium) {
         width: 20rem;
         height: 16rem;
       }
+
+      @include respond(small) {
+        width: 17rem;
+        height: 14rem;
+      }
     }
+  }
+}
+
+.no-img {
+  width: 24.37em;
+  height: 20em;
+
+  @include respond(medium) {
+    width: 20rem;
+    height: 16rem;
+  }
+
+  @include respond(small) {
+    width: 17rem;
+    height: 14rem;
   }
 }
 
@@ -29,21 +53,27 @@
   width: 24rem;
   border-style: groove;
 
-  @include respond(small) {
+  @include respond(medium) {
     width: 20rem;
+  }
+
+  @include respond(small) {
+    width: 17rem;
   }
 }
 
 #description {
- height: 3.43rem;
- width: 24rem;  
+  height: 3.43rem;
+  width: 24rem;  
 
- @include respond(small) {
-  width: 20rem;
- }
+  @include respond(medium) {
+    width: 20rem;
+  }
+
+  @include respond(small) {
+    width: 17rem;
+  }
 }
-
-
 
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
