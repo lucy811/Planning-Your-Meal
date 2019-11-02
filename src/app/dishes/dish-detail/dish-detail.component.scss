@@ -6,39 +6,7 @@
   position: absolute;
 }
 
-.image {
-  perspective: 1000;
-  transition: 2s;
-  transform-style: preserve-3d;
-  position: relative;
-  
-  &:hover {
-    transform: rotateY(180deg);
-  }
-
-  &-front {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
-
-  &-back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotateY(180deg);
-    background-image: linear-gradient(to right bottom,  #e7edf5, #9c0f05);
-    text-align: center;
-    color: white;
-    margin-bottom: 8rem;
-  }
-}
-
-.image, .image-front, .image-back {
+.image, .image-dish {
   margin-top: 1rem;
   width: 24.5rem;
   height: 20rem;
@@ -59,33 +27,6 @@
     margin-top: 2rem;
     width: 7.5rem;
     height: 6rem;
-  }
-}
-
-.price-only {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-
-  @include respond(small) {
-    font-size: 1.4rem;
-  }
-}
-
-.price-value {
-  font-size: 2rem;
-  font-weight: 100;
-
-  @include respond(small) {
-    font-size: 1.8rem;
-  }
-}
-
-.book {
-  font-size: 1.8rem;
-  font-weight: 100;
-
-  @include respond(small) {
-    font-size: 1.6rem;
   }
 }
 
